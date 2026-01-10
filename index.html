@@ -33,7 +33,6 @@
             padding: 2rem 0;
         }
 
-        /* Animação de Surgimento (Fade-in) */
         .reveal {
             opacity: 0;
             transform: translateY(30px);
@@ -47,7 +46,7 @@
 
         /* Hero Section */
         header {
-            min-height: 90vh;
+            min-height: 80vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -70,15 +69,10 @@
             line-height: 1.4;
         }
 
-        .accenture-badge {
-            display: inline-block;
-            background: var(--accenture);
-            color: white;
-            padding: 6px 18px;
-            font-size: 0.85rem;
-            font-weight: 800;
-            border-radius: 50px;
+        .accenture-logo-top {
+            height: 40px;
             margin-bottom: 1.5rem;
+            display: block;
         }
 
         /* Timeline Section */
@@ -118,15 +112,23 @@
         }
 
         .exp-title { font-size: clamp(2.2rem, 5vw, 4.5rem); font-weight: 800; margin: 0; }
-        .exp-role { font-size: 1.3rem; margin-bottom: 1rem; font-weight: 500; }
+        .exp-role { font-size: 1.3rem; margin-bottom: 0.5rem; font-weight: 500; }
+        .exp-duration { font-size: 0.9rem; color: #666; margin-bottom: 1rem; font-weight: 600; text-transform: uppercase; }
         .exp-desc { font-size: 1.15rem; line-height: 1.6; max-width: 650px; color: #333; }
 
-        /* Clientes Enterprise */
-        .clients-grid {
+        .skills-grid {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
             margin-top: 1.5rem;
+        }
+        .skill-tag {
+            background: #000;
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
         }
         .client-tag {
             background: #eee;
@@ -136,7 +138,6 @@
             font-weight: 600;
         }
 
-        /* Footer */
         footer { margin: 20vh 0 10vh 0; }
         footer a.email-link {
             color: var(--text);
@@ -145,14 +146,10 @@
             font-weight: 800;
             display: block;
             margin: 2rem 0;
-            transition: opacity 0.3s;
         }
-        footer a.email-link:hover { opacity: 0.6; }
 
-        /* Responsividade */
         @media (max-width: 768px) {
             .experience-item { grid-template-cols: 1fr; padding: 2.5rem 0; }
-            h1 { line-height: 0.9; }
         }
     </style>
 </head>
@@ -160,9 +157,9 @@
 
     <div class="container">
         <header class="reveal">
+            <img src="accenture.png" alt="Accenture" class="accenture-logo-top">
             <h1>OSCAR<br>OLIVEIRA</h1>
             <div class="intro-text">
-                <span class="accenture-badge">ACCENTURE @ ADTECH PROJECTS</span><br>
                 Líder de Especialistas em <strong>Retail Media</strong> no <strong>Mercado Livre Ads</strong>. 
                 Expertise em estratégia Full-Funnel e crescimento de receita para marcas globais.
             </div>
@@ -173,7 +170,7 @@
 
             <div class="experience-item meli-border reveal">
                 <div>
-                    <span class="tag">Nov 2023 — Atual</span>
+                    <span class="tag">Atual</span>
                     <div class="title-container">
                         <img src="mercado_livre.png" alt="Meli" class="company-logo">
                         <div class="exp-title">Mercado Livre</div>
@@ -181,15 +178,25 @@
                 </div>
                 <div>
                     <div class="exp-role">Retail Media Specialist Manager (via Accenture)</div>
+                    <div class="exp-duration">Desde Nov de 2023</div>
                     <p class="exp-desc">
-                        Gestão técnica de performance no ecossistema de Ads do Mercado Livre. Foco total em elevar o ROAS de grandes parceiros através de análise profunda de dados e otimização de campanhas.
+                        Liderança de time técnico focado em performance para o ecossistema de Retail Media. Tradução de ferramentas complexas em resultados de negócio.
                     </p>
+                    <div class="tag" style="margin-top: 1.5rem; font-size: 0.65rem;">Core Skills no Projeto:</div>
+                    <div class="skills-grid">
+                        <span class="skill-tag">Liderança de Equipe</span>
+                        <span class="skill-tag">Marketing Digital</span>
+                        <span class="skill-tag">Planejamento Estratégico</span>
+                        <span class="skill-tag">Business Intelligence</span>
+                        <span class="skill-tag">Retail Media</span>
+                        <span class="skill-tag">Data Analysis</span>
+                    </div>
                 </div>
             </div>
 
             <div class="experience-item pin-border reveal">
                 <div>
-                    <span class="tag">2021 — 2023</span>
+                    <span class="tag">Anterior</span>
                     <div class="title-container">
                         <img src="pinterest.png" alt="Pinterest" class="company-logo">
                         <div class="exp-title" style="color: var(--pinterest);">Pinterest</div>
@@ -197,18 +204,19 @@
                 </div>
                 <div>
                     <div class="exp-role">Strategic Support for Enterprise Sales (via Accenture)</div>
+                    <div class="exp-duration">Abr de 2021 — Out de 2023 (2 anos 7 meses)</div>
                     <p class="exp-desc">
-                        Liderança estratégica para verticais de alto impacto. Responsável pela escalabilidade de receita e entrega de campanhas com <strong>ROI médio superior a 10x</strong>.
+                        Foco em escala de receita para clientes de alto impacto. Campanhas com média de 10x ROI.
                     </p>
-                    <div class="tag" style="margin-top: 1.5rem; font-size: 0.65rem;">Principais Contas Enterprise:</div>
+                    <div class="tag" style="margin-top: 1.5rem; font-size: 0.65rem;">Contas Gerenciadas:</div>
                     <div class="clients-grid">
-                        <span class="client-tag">Riachuelo</span>
+                        <span class="client-tag">Renner</span>
                         <span class="client-tag">Shopee</span>
                         <span class="client-tag">Grupo Soma</span>
                         <span class="client-tag">Netflix</span>
                         <span class="client-tag">HBO Max</span>
                         <span class="client-tag">Disney+</span>
-                        <span class="client-tag">Renner</span>
+                        <span class="client-tag">Riachuelo</span>
                     </div>
                 </div>
             </div>
@@ -216,11 +224,12 @@
             <div class="experience-item reveal" style="opacity: 0.6; border-top-width: 1px;">
                 <div>
                     <span class="tag">Histórico</span>
-                    <div class="exp-title" style="font-size: 1.8rem;">Luby & Mobsite</div>
+                    <div class="exp-title" style="font-size: 1.8rem;">Luby Software</div>
                 </div>
                 <div>
-                    <div class="exp-role">BI & Business Development</div>
-                    <p class="exp-desc">Foco em análise de performance e expansão de mercado para soluções tecnológicas.</p>
+                    <div class="exp-role">Account Executive Jr.</div>
+                    <div class="exp-duration">Dez de 2021 — Out de 2022 (11 meses)</div>
+                    <p class="exp-desc">Gestão de parcerias estratégicas e vendas de software no mercado internacional.</p>
                 </div>
             </div>
 
@@ -231,7 +240,8 @@
                 </div>
                 <div>
                     <div class="exp-role">Off-Set Press Operator</div>
-                    <p class="exp-desc">Experiência sólida em processos industriais e controle de qualidade gráfica (Kaizen/CapDo).</p>
+                    <div class="exp-duration">Jun de 2011 — Fev de 2018 (6 anos 9 meses)</div>
+                    <p class="exp-desc">Operação técnica e melhoria contínua em processos de larga escala.</p>
                 </div>
             </div>
         </section>
@@ -243,18 +253,16 @@
                 <p>Design Gráfico — <strong>SENAI</strong></p>
             </div>
             <div>
-                <span class="tag">Global Mindset</span>
-                <p>Vivência Internacional: <strong>San Diego, Califórnia (EUA)</strong>.</p>
-                <p>Inglês Fluente Aplicado a Negócios.</p>
+                <span class="tag">Global</span>
+                <p>San Diego, Califórnia (EUA) — Multicultural Experience.</p>
+                <p>Inglês Fluente (Full Professional).</p>
             </div>
         </section>
 
         <footer class="reveal">
-            <span class="tag">Get in touch</span>
+            <span class="tag">Contato</span>
             <a href="mailto:oscar.mosca.oliveira@gmail.com" class="email-link">oscar.mosca.oliveira@gmail.com</a>
-            <div style="display: flex; gap: 20px;">
-                <a href="https://linkedin.com/in/oscarmosca" target="_blank" style="color: black; font-weight: 800; text-decoration: none; border-bottom: 2px solid var(--accenture);">LINKEDIN ↗</a>
-            </div>
+            <a href="https://linkedin.com/in/oscarmosca" target="_blank" style="color: black; font-weight: 800; text-decoration: none; border-bottom: 2px solid var(--accenture);">LINKEDIN ↗</a>
         </footer>
     </div>
 
@@ -264,16 +272,13 @@
             for (var i = 0; i < reveals.length; i++) {
                 var windowHeight = window.innerHeight;
                 var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
-                if (elementTop < windowHeight - elementVisible) {
+                if (elementTop < windowHeight - 150) {
                     reveals[i].classList.add("active");
                 }
             }
         }
         window.addEventListener("scroll", reveal);
-        // Ativa a primeira seção (Hero) ao carregar
         window.onload = reveal;
     </script>
-
 </body>
 </html>
