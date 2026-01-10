@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscar Oliveira | AdTech Leader</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #000000;
+            --accent: #666666;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .container { padding: 5vw; }
+
+        /* Hero Section */
+        header {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 { font-size: 12vw; margin: 0; letter-spacing: -0.05em; line-height: 0.9; }
+        
+        .role-highlight {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            max-width: 600px;
+            font-weight: 300;
+        }
+
+        /* Destaque Accenture -> Mercado Livre */
+        .experience-grid {
+            display: grid;
+            grid-template-cols: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 10vh;
+        }
+
+        .card {
+            border-top: 1px solid var(--text);
+            padding-top: 1rem;
+        }
+
+        .card h2 { font-size: 3rem; margin-bottom: 0.5rem; }
+        .tag { font-weight: 800; text-transform: uppercase; font-size: 0.8rem; }
+        
+        .stats {
+            font-size: 4rem;
+            font-weight: 800;
+            margin: 1rem 0;
+            display: block;
+        }
+
+        /* Estilo Minimalista de lista */
+        ul { list-style: none; padding: 0; margin-top: 2rem; }
+        li { border-bottom: 0.5px solid #eee; padding: 1rem 0; display: flex; justify-content: space-between; }
+
+        @media (max-width: 768px) {
+            .experience-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 18vw; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="tag">AdTech & Retail Media Leader</div>
+            <h1>OSCAR<br>OLIVEIRA</h1>
+            <p class="role-highlight">
+                Especialista em impulsionar receita através de parcerias estratégicas e insights baseados em dados[cite: 25]. Atualmente liderando a performance no ecossistema de Retail Media do <strong>Mercado Livre Ads</strong>[cite: 26, 51].
+            </p>
+        </header>
+
+        <section class="experience-grid">
+            <div class="card">
+                <div class="tag">Atualidade</div>
+                <h2>Mercado Livre</h2>
+                <p>Retail Media Specialist Manager[cite: 50].</p>
+                <p>Lidero um time focado em maximizar o ROAS para os principais sellers da América Latina[cite: 51, 52].</p>
+            </div>
+
+            <div class="card">
+                <div class="tag">Trajetória Recente</div>
+                <h2>Accenture</h2>
+                <p>Strategic Support para Pinterest[cite: 40, 41].</p>
+                <span class="stats">+10x ROI</span>
+                <p>Média de aumento de ROI alcançada em campanhas de verticais de alto impacto como Fashion e Home Decor.</p>
+            </div>
+        </section>
+
+        <section style="margin-top: 10vh;">
+            <div class="tag">Expertise</div>
+            <ul>
+                <li><span>Business Intelligence (BI)</span> <span>[cite: 7]</span></li>
+                <li><span>Looker Studio (Dashboards Automatizados)</span> <span>[cite: 33]</span></li>
+                <li><span>Gestão de Times de Alta Performance</span> <span>[cite: 31]</span></li>
+                <li><span>Estratégia Full-Funnel</span> <span>[cite: 32]</span></li>
+            </ul>
+        </section>
+
+        <footer style="margin-top: 10vh; padding-bottom: 5vh;">
+            <p class="tag">Vamos conectar</p>
+            <a href="mailto:oscar.mosca.oliveira@gmail.com" style="color:black; font-size: 2rem; text-decoration: none;">oscar.mosca.oliveira@gmail.com [cite: 2, 3]</a>
+        </footer>
+    </div>
+
+</body>
+</html>
