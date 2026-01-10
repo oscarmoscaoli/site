@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oscar Oliveira | AdTech Leader</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;800&display=swap" rel="stylesheet">
+    <title>Oscar Oliveira | AdTech & Retail Media Leader</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg: #ffffff;
             --text: #000000;
-            --accent: #666666;
+            --accent: #e60023; /* Sutil referência ao Pinterest */
+            --gray: #f4f4f4;
         }
 
         body {
@@ -17,58 +18,122 @@
             color: var(--text);
             font-family: 'Inter', sans-serif;
             margin: 0;
-            line-height: 1.2;
+            line-height: 1.4;
+            -webkit-font-smoothing: antialiased;
         }
 
-        .container { padding: 5vw; }
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 5vw; 
+        }
 
         /* Hero Section */
         header {
-            height: 80vh;
+            min-height: 70vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
 
-        h1 { font-size: 12vw; margin: 0; letter-spacing: -0.05em; line-height: 0.9; }
-        
+        .tag { 
+            font-weight: 800; 
+            text-transform: uppercase; 
+            font-size: 0.75rem; 
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        h1 { 
+            font-size: clamp(3rem, 10vw, 8rem); 
+            margin: 0; 
+            letter-spacing: -0.05em; 
+            line-height: 0.85; 
+            font-weight: 800;
+        }
+
         .role-highlight {
-            font-size: 1.5rem;
-            margin-top: 2rem;
-            max-width: 600px;
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            margin-top: 2.5rem;
+            max-width: 700px;
             font-weight: 300;
         }
 
-        /* Destaque Accenture -> Mercado Livre */
+        /* Seções Principais */
+        section { margin-top: 15vh; }
+
         .experience-grid {
             display: grid;
             grid-template-cols: 1fr 1fr;
-            gap: 2rem;
-            margin-top: 10vh;
+            gap: 4rem;
         }
 
         .card {
             border-top: 1px solid var(--text);
-            padding-top: 1rem;
+            padding-top: 1.5rem;
+            position: relative;
         }
 
-        .card h2 { font-size: 3rem; margin-bottom: 0.5rem; }
-        .tag { font-weight: 800; text-transform: uppercase; font-size: 0.8rem; }
+        h2 { font-size: 2.5rem; margin: 0.5rem 0; font-weight: 800; }
         
         .stats {
-            font-size: 4rem;
+            font-size: 3.5rem;
             font-weight: 800;
             margin: 1rem 0;
             display: block;
+            color: var(--text);
         }
 
-        /* Estilo Minimalista de lista */
-        ul { list-style: none; padding: 0; margin-top: 2rem; }
-        li { border-bottom: 0.5px solid #eee; padding: 1rem 0; display: flex; justify-content: space-between; }
+        .highlight-box {
+            background-color: var(--gray);
+            padding: 2rem;
+            border-left: 4px solid var(--accent);
+            margin-top: 1rem;
+        }
+
+        /* Timeline Inversa */
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .timeline-item.past { opacity: 0.5; }
+
+        /* Skills Marquee */
+        .skills-marquee {
+            overflow: hidden;
+            white-space: nowrap;
+            background: var(--text);
+            color: var(--bg);
+            padding: 1rem 0;
+            margin: 10vh -5vw;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+        footer a {
+            color: var(--text);
+            font-size: clamp(1.5rem, 4vw, 3rem);
+            text-decoration: none;
+            font-weight: 800;
+            word-break: break-all;
+        }
 
         @media (max-width: 768px) {
-            .experience-grid { grid-template-columns: 1fr; }
-            h1 { font-size: 18vw; }
+            .experience-grid { grid-template-cols: 1fr; }
+            .timeline-item { flex-direction: column; gap: 0.5rem; }
         }
     </style>
 </head>
@@ -76,43 +141,89 @@
 
     <div class="container">
         <header>
-            <div class="tag">AdTech & Retail Media Leader</div>
+            <span class="tag">Mercado Livre AdTech Leader | Strategic Support</span>
             <h1>OSCAR<br>OLIVEIRA</h1>
             <p class="role-highlight">
-                Especialista em impulsionar receita através de parcerias estratégicas e insights baseados em dados[cite: 25]. Atualmente liderando a performance no ecossistema de Retail Media do <strong>Mercado Livre Ads</strong>[cite: 26, 51].
+                Especialista em AdTech orientado a resultados com histórico comprovado no crescimento de receita através de parcerias estratégicas e insights baseados em dados[cite: 25, 21].
             </p>
         </header>
 
         <section class="experience-grid">
             <div class="card">
-                <div class="tag">Atualidade</div>
+                <span class="tag">Atualidade (Desde Nov 2025)</span>
                 <h2>Mercado Livre</h2>
-                <p>Retail Media Specialist Manager[cite: 50].</p>
-                <p>Lidero um time focado em maximizar o ROAS para os principais sellers da América Latina[cite: 51, 52].</p>
+                <p><strong>Retail Media Specialist Manager</strong> [cite: 49, 50]</p>
+                <p>Lidero um time de especialistas focado em maximizar a performance no ecossistema de Retail Media da maior plataforma de e-commerce da América Latina[cite: 26, 51].</p>
             </div>
 
             <div class="card">
-                <div class="tag">Trajetória Recente</div>
+                <span class="tag">Foco em Performance</span>
                 <h2>Accenture</h2>
-                <p>Strategic Support para Pinterest[cite: 40, 41].</p>
-                <span class="stats">+10x ROI</span>
-                <p>Média de aumento de ROI alcançada em campanhas de verticais de alto impacto como Fashion e Home Decor.</p>
+                <span class="stats">10x ROI</span>
+                <p>Como Senior Analyst para o Pinterest, entreguei estratégias que elevaram o ROI médio das campanhas em mais de 10 vezes[cite: 29, 42].</p>
             </div>
         </section>
 
-        <section style="margin-top: 10vh;">
-            <div class="tag">Expertise</div>
-            <ul>
-                <li><span>Business Intelligence (BI)</span> <span>[cite: 7]</span></li>
-                <li><span>Looker Studio (Dashboards Automatizados)</span> <span>[cite: 33]</span></li>
-                <li><span>Gestão de Times de Alta Performance</span> <span>[cite: 31]</span></li>
-                <li><span>Estratégia Full-Funnel</span> <span>[cite: 32]</span></li>
-            </ul>
+        <section>
+            <div class="highlight-box">
+                <span class="tag" style="color: var(--accent);">Pinterest Ads Expertise</span>
+                <p style="font-size: 1.2rem;">
+                    Especialista em escalar receita para clientes <strong>Enterprise</strong> nas verticais de Fashion, Home Decor, Travel e Insurance[cite: 28, 42]. Domínio completo do <strong>Pinterest Ads Manager</strong> e desenvolvimento de parcerias estratégicas[cite: 34, 45].
+                </p>
+                <small>• Pinterest Certified Media Buyer [cite: 18]</small>
+            </div>
         </section>
 
-        <footer style="margin-top: 10vh; padding-bottom: 5vh;">
-            <p class="tag">Vamos conectar</p>
-            <a href="mailto:oscar.mosca.oliveira@gmail.com" style="color:black; font-size: 2rem; text-decoration: none;">oscar.mosca.oliveira@gmail.com [cite: 2, 3]</a>
+        <div class="skills-marquee">
+            <div class="marquee-content">
+                &nbsp; BUSINESS INTELLIGENCE (BI) • DATA ANALYSIS • TEAM LEADERSHIP • LOOKER STUDIO • MERCADO ADS • RETAIL MEDIA • STRATEGIC PLANNING • 
+                &nbsp; BUSINESS INTELLIGENCE (BI) • DATA ANALYSIS • TEAM LEADERSHIP • LOOKER STUDIO • MERCADO ADS • RETAIL MEDIA • STRATEGIC PLANNING • 
+            </div>
+        </div>
+
+        <section>
+            <span class="tag">Histórico Profissional</span>
+            
+            <div class="timeline-item">
+                <span><strong>Luby Software</strong> | Account Executive Jr.</span>
+                <span>2021 — 2022 [cite: 62, 64, 65]</span>
+            </div>
+            
+            <div class="timeline-item">
+                <span><strong>Mobsite</strong> | Inside Sales Representative</span>
+                <span>2020 — 2021 [cite: 74, 75, 76]</span>
+            </div>
+
+            <div class="timeline-item past">
+                <span><strong>LuckyDsHostel</strong> | Receptionist (San Diego, CA)</span>
+                <span>2018 [cite: 80, 81, 82, 83]</span>
+            </div>
+
+            <div class="timeline-item past">
+                <span><strong>Tilibra</strong> | Off-Set Press Operator</span>
+                <span>2011 — 2018 [cite: 85, 87, 88]</span>
+            </div>
+        </section>
+
+        <section style="display: grid; grid-template-cols: 1fr 1fr; gap: 2rem;">
+            <div>
+                <span class="tag">Educação</span>
+                <p>Bacharelado em Publicidade e Propaganda - UNISAGRADO [cite: 114, 115]</p>
+                <p>Técnico em Artes Gráficas - SENAI [cite: 117, 118]</p>
+            </div>
+            <div>
+                <span class="tag">Idiomas</span>
+                <p>Português (Nativo) [cite: 11]</p>
+                <p>Inglês (Full Professional) [cite: 12]</p>
+            </div>
+        </section>
+
+        <footer style="margin: 15vh 0 10vh 0;">
+            <span class="tag">Contato</span>
+            <a href="mailto:oscar.mosca.oliveira@gmail.com">oscar.mosca.oliveira@gmail.com</a> [cite: 2, 3]
+            <p style="margin-top: 2rem;">
+                <a href="https://www.linkedin.com/in/oscarmosca" target="_blank" style="font-size: 1rem;">LinkedIn Profile ↗</a> [cite: 4]
+            </p>
         </footer>
     </div>
 
