@@ -107,13 +107,13 @@
         .exp-role { font-size: 1.4rem; font-weight: 500; margin-bottom: 0.5rem; }
         .exp-duration { font-size: 0.85rem; font-weight: 600; color: #777; margin-bottom: 1.5rem; text-transform: uppercase; }
 
-        /* CLIENTS AND SKILLS TAGS */
+        /* TAGS */
         .tags-container { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.5rem; }
-        .skill-tag { background: #000; color: #fff; padding: 6px 14px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; transition: all 0.3s ease; }
+        .skill-tag { background: #000; color: #fff; padding: 6px 14px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; transition: all 0.3s ease; cursor: default; }
         .client-tag { background: #eee; color: #333; padding: 6px 14px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; transition: all 0.3s ease; border: 1px solid transparent; }
         
-        .skill-tag:hover, .client-tag:hover { transform: translateY(-3px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        .client-tag:hover { border-color: var(--pinterest); }
+        .skill-tag:hover { transform: translateY(-3px); box-shadow: 0 4px 8px rgba(0,0,0,0.15); background: var(--accenture); }
+        .client-tag:hover { transform: translateY(-3px); border-color: var(--pinterest); }
 
         /* FOOTER */
         footer { margin-top: 20vh; padding-bottom: 10vh; border-top: 1px solid #eee; padding-top: 4rem; }
@@ -188,6 +188,13 @@
                     <div class="exp-duration" id="pin-date">Apr 2021 — Oct 2023 (2 yrs 7 mos)</div>
                     <p id="pin-desc" style="font-size: 1.2rem; line-height: 1.5; color: #333;">Direct support to Enterprise Account Managers. Delivering an average ROI increase of over 10x through tailored media strategies.</p>
                     
+                    <div class="tags-container" id="pin-skills">
+                        <span class="skill-tag">Enterprise Sales</span>
+                        <span class="skill-tag">ROI Optimization</span>
+                        <span class="skill-tag">Full-Funnel Media</span>
+                        <span class="skill-tag">Ads Manager</span>
+                    </div>
+
                     <span class="section-tag" style="margin-top: 1.5rem; margin-bottom: 0.8rem; font-size: 0.65rem;" id="label-clients">Enterprise Clients:</span>
                     <div class="tags-container">
                         <span class="client-tag">Renner</span>
@@ -210,6 +217,12 @@
                     <div class="exp-role" id="luby-role">Account Executive Jr.</div>
                     <div class="exp-duration" id="luby-date">Sep 2021 — Mar 2022 (7 mos)</div>
                     <p id="luby-desc" style="font-size: 1.1rem; line-height: 1.5; color: #333;">Management of international accounts and custom digital solutions using SPIN and GAP Selling.</p>
+                    <div class="tags-container" id="luby-skills">
+                        <span class="skill-tag">SPIN Selling</span>
+                        <span class="skill-tag">GAP Selling</span>
+                        <span class="skill-tag">International Sales</span>
+                        <span class="skill-tag">Negotiation</span>
+                    </div>
                 </div>
             </div>
 
@@ -222,6 +235,12 @@
                     <div class="exp-role" id="mobsite-role">Inside Sales Representative</div>
                     <div class="exp-duration" id="mobsite-date">Feb 2020 — May 2021 (1 yr 4 mos)</div>
                     <p id="mobsite-desc" style="font-size: 1.1rem; line-height: 1.5; color: #333;">Inbound lead conversion and marketing campaign management for SMBs.</p>
+                    <div class="tags-container" id="mobsite-skills">
+                        <span class="skill-tag">Lead Qualification</span>
+                        <span class="skill-tag">Pipedrive CRM</span>
+                        <span class="skill-tag">RD Station</span>
+                        <span class="skill-tag">Inbound Sales</span>
+                    </div>
                 </div>
             </div>
 
@@ -232,6 +251,11 @@
                 <div>
                     <div class="exp-role" id="tilibra-role">Off-Set Press Operator</div>
                     <div class="exp-duration" id="tilibra-date">2011 — 2018 (6 yrs 9 mos)</div>
+                    <div class="tags-container" id="tilibra-skills">
+                        <span class="skill-tag">Quality Control</span>
+                        <span class="skill-tag">Process Optimization</span>
+                        <span class="skill-tag">Continuous Improvement</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -265,7 +289,12 @@
                 lubyDate: "Sep 2021 — Mar 2022 (7 mos)",
                 mobsiteDate: "Feb 2020 — May 2021 (1 yr 4 mos)",
                 tilibraDate: "2011 — 2018 (6 yrs 9 mos)",
-                labelContact: "Contact & Connection"
+                labelContact: "Contact & Connection",
+                meliSkills: ["Leadership", "BI", "Retail Media", "Strategy", "Data Analysis"],
+                pinSkills: ["Enterprise Sales", "ROI Optimization", "Full-Funnel Media", "Ads Manager"],
+                lubySkills: ["SPIN Selling", "GAP Selling", "International Sales", "Negotiation"],
+                mobsiteSkills: ["Lead Qualification", "Pipedrive CRM", "RD Station", "Inbound Sales"],
+                tilibraSkills: ["Quality Control", "Process Optimization", "Continuous Improvement"]
             },
             pt: {
                 heroRole: "Gerente Especialista em Retail Media",
@@ -285,7 +314,12 @@
                 lubyDate: "Set 2021 — Mar 2022 (7 meses)",
                 mobsiteDate: "Fev 2020 — Mai 2021 (1 ano 4 meses)",
                 tilibraDate: "2011 — 2018 (6 anos 9 meses)",
-                labelContact: "Contato & Conexão"
+                labelContact: "Contato & Conexão",
+                meliSkills: ["Liderança", "BI", "Retail Media", "Estratégia", "Análise de Dados"],
+                pinSkills: ["Vendas Enterprise", "Otimização de ROI", "Mídia Full-Funnel", "Ads Manager"],
+                lubySkills: ["SPIN Selling", "GAP Selling", "Vendas Internacionais", "Negociação"],
+                mobsiteSkills: ["Qualificação de Leads", "Pipedrive CRM", "RD Station", "Vendas Inbound"],
+                tilibraSkills: ["Controle de Qualidade", "Otimização de Processos", "Melhoria Contínua"]
             }
         };
 
@@ -308,6 +342,17 @@
             document.getElementById('mobsite-date').innerText = content[lang].mobsiteDate;
             document.getElementById('tilibra-date').innerText = content[lang].tilibraDate;
             document.getElementById('label-contact').innerText = content[lang].labelContact;
+
+            const updateSkills = (id, skills) => {
+                const container = document.getElementById(id);
+                container.innerHTML = skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('');
+            };
+
+            updateSkills('meli-skills', content[lang].meliSkills);
+            updateSkills('pin-skills', content[lang].pinSkills);
+            updateSkills('luby-skills', content[lang].lubySkills);
+            updateSkills('mobsite-skills', content[lang].mobsiteSkills);
+            updateSkills('tilibra-skills', content[lang].tilibraSkills);
 
             document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
