@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oscar Oliveira | AdTech & Retail Media Leader</title>
+    <title>Oscar Oliveira | AdTech Leader</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -22,7 +22,7 @@
             color: var(--text);
             font-family: 'Inter', sans-serif;
             margin: 0;
-            line-height: 1.2;
+            line-height: 1.1;
             overflow-x: hidden;
         }
 
@@ -31,6 +31,18 @@
             max-width: 1400px; 
             margin: 0 auto; 
             padding: 2rem 0;
+        }
+
+        /* Animações de Entrada */
+        @keyframes tracking-in-expand {
+            0% { letter-spacing: -0.5em; opacity: 0; }
+            40% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slide-up {
+            0% { transform: translateY(50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
         }
 
         .reveal {
@@ -46,35 +58,45 @@
 
         /* Hero Section */
         header {
-            min-height: 80vh;
+            min-height: 95vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
 
         h1 { 
-            font-size: clamp(4rem, 18vw, 15rem); 
+            font-size: clamp(5rem, 22vw, 18rem); 
             margin: 0; 
-            letter-spacing: -0.06em; 
-            line-height: 0.8; 
+            letter-spacing: -0.07em; 
+            line-height: 0.75; 
             font-weight: 800;
             text-transform: uppercase;
+            animation: tracking-in-expand 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
         }
 
-        .intro-text {
-            font-size: clamp(1.1rem, 2.5vw, 1.8rem);
-            margin-top: 3rem;
-            max-width: 850px;
+        /* Campo Roxo em Destaque */
+        .hero-position-box {
+            display: inline-block;
+            background-color: var(--accenture);
+            color: white;
+            padding: 1.5rem 2.5rem;
+            margin-top: 2rem;
+            animation: slide-up 1s ease-out 0.5s both;
+        }
+
+        .hero-position-box h2 {
+            font-size: clamp(1.5rem, 4vw, 3.5rem);
+            margin: 0;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-position-box p {
+            font-size: 1.2rem;
+            margin: 0.5rem 0 0 0;
             font-weight: 300;
-            line-height: 1.4;
-        }
-
-        /* Logo Accenture Sutil */
-        .accenture-inline-logo {
-            height: 12px;
-            vertical-align: middle;
-            margin-left: 5px;
-            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
         }
 
         /* Timeline Section */
@@ -91,13 +113,19 @@
 
         .experience-item {
             border-top: 2px solid var(--text);
-            padding: 4rem 0;
+            padding: 4rem 2rem;
             display: grid;
             grid-template-cols: 1fr 2fr;
             gap: 2rem;
+            transition: background 0.4s;
+            margin: 0 -2rem;
         }
 
-        .meli-border { border-top-color: var(--meli); border-top-width: 10px; }
+        .experience-item:hover {
+            background-color: var(--gray);
+        }
+
+        .meli-border { border-top-color: var(--meli); border-top-width: 12px; }
         .pin-border { border-top-color: var(--pinterest); }
         
         .title-container {
@@ -108,15 +136,14 @@
         }
 
         .company-logo {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             object-fit: contain;
         }
 
-        .exp-title { font-size: clamp(2.2rem, 5vw, 4.5rem); font-weight: 800; margin: 0; }
-        .exp-role { font-size: 1.3rem; margin-bottom: 0.5rem; font-weight: 500; }
-        .exp-duration { font-size: 0.9rem; color: #666; margin-bottom: 1rem; font-weight: 600; text-transform: uppercase; }
-        .exp-desc { font-size: 1.15rem; line-height: 1.6; max-width: 650px; color: #333; }
+        .exp-title { font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 800; margin: 0; letter-spacing: -0.03em; }
+        .exp-role { font-size: 1.5rem; margin-bottom: 0.5rem; font-weight: 500; }
+        .exp-duration { font-size: 0.9rem; color: #666; margin-bottom: 1rem; font-weight: 600; }
 
         .skills-grid {
             display: flex;
@@ -127,44 +154,36 @@
         .skill-tag {
             background: #000;
             color: #fff;
-            padding: 6px 14px;
+            padding: 8px 16px;
             border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-        .client-tag {
-            background: #eee;
-            padding: 6px 14px;
-            border-radius: 4px;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             font-weight: 600;
         }
 
-        footer { margin: 20vh 0 10vh 0; }
         footer a.email-link {
             color: var(--text);
-            font-size: clamp(1.5rem, 5vw, 4rem);
+            font-size: clamp(1.5rem, 6vw, 5rem);
             text-decoration: none;
             font-weight: 800;
             display: block;
-            margin: 2rem 0;
+            letter-spacing: -0.04em;
         }
 
         @media (max-width: 768px) {
-            .experience-item { grid-template-cols: 1fr; padding: 2.5rem 0; }
+            .experience-item { grid-template-cols: 1fr; padding: 3rem 1rem; margin: 0; }
+            h1 { line-height: 0.8; }
+            .hero-position-box { padding: 1rem; }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <header class="reveal">
+        <header>
             <h1>OSCAR<br>OLIVEIRA</h1>
-            <div class="intro-text">
-                Retail Media Specialist Manager @ <strong>Accenture</strong> 
-                <img src="accenture.png" alt="Accenture" class="accenture-inline-logo" style="height: 20px;"><br>
-                Focado no ecossistema <strong>Mercado Livre Ads</strong>. 
-                Expertise em estratégia Full-Funnel e crescimento de receita para marcas globais.
+            <div class="hero-position-box">
+                <h2>Retail Media Specialist Manager</h2>
+                <p>Mercado Livre Ads @ Accenture</p>
             </div>
         </header>
 
@@ -180,19 +199,15 @@
                     </div>
                 </div>
                 <div>
-                    <div class="exp-role">Retail Media Specialist Manager @ <strong>Accenture</strong> <img src="accenture.png" alt="Accenture" class="accenture-inline-logo"></div>
-                    <div class="exp-duration">Desde Nov de 2023</div>
-                    <p class="exp-desc">
-                        Liderança de time técnico focado em performance para o ecossistema de Retail Media. Tradução de ferramentas complexas em resultados de negócio.
-                    </p>
-                    <div class="tag" style="margin-top: 1.5rem; font-size: 0.65rem;">Core Skills no Projeto:</div>
+                    <div class="exp-role">Retail Media Specialist Manager @ <strong>Accenture</strong></div>
+                    <div class="exp-duration">Novembro de 2023 — Presente</div>
+                    <p style="font-size: 1.2rem; line-height: 1.5;">Liderança técnica e estratégica em Retail Media, focada em performance e insights orientados a dados para o maior ecossistema de Ads da América Latina.</p>
                     <div class="skills-grid">
-                        <span class="skill-tag">Liderança de Equipe</span>
-                        <span class="skill-tag">Marketing Digital</span>
-                        <span class="skill-tag">Planejamento Estratégico</span>
-                        <span class="skill-tag">Business Intelligence</span>
+                        <span class="skill-tag">Liderança</span>
+                        <span class="skill-tag">Marketing</span>
+                        <span class="skill-tag">Estratégia Digital</span>
+                        <span class="skill-tag">BI</span>
                         <span class="skill-tag">Retail Media</span>
-                        <span class="skill-tag">Data Analysis</span>
                     </div>
                 </div>
             </div>
@@ -206,20 +221,16 @@
                     </div>
                 </div>
                 <div>
-                    <div class="exp-role">Strategic Support for Enterprise Sales @ <strong>Accenture</strong> <img src="accenture.png" alt="Accenture" class="accenture-inline-logo"></div>
-                    <div class="exp-duration">Abr de 2021 — Out de 2023 (2 anos 7 meses)</div>
-                    <p class="exp-desc">
-                        Foco em escala de receita para clientes de alto impacto. Campanhas com média de 10x ROI.
-                    </p>
-                    <div class="tag" style="margin-top: 1.5rem; font-size: 0.65rem;">Contas Gerenciadas:</div>
-                    <div class="clients-grid">
-                        <span class="client-tag">Renner</span>
-                        <span class="client-tag">Shopee</span>
-                        <span class="client-tag">Grupo Soma</span>
-                        <span class="client-tag">Netflix</span>
-                        <span class="client-tag">HBO Max</span>
-                        <span class="client-tag">Disney+</span>
-                        <span class="client-tag">Riachuelo</span>
+                    <div class="exp-role">Strategic Support for Enterprise Sales @ <strong>Accenture</strong></div>
+                    <div class="exp-duration">Abril de 2021 — Outubro de 2023</div>
+                    <p style="font-size: 1.2rem;">Gestão de performance para grandes marcas. Campanhas otimizadas com entrega de ROI superior a 10x.</p>
+                    <div class="tag" style="margin-top: 1.5rem; font-size: 0.65rem;">Clientes Enterprise:</div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                        <span style="background: #eee; padding: 5px 12px; font-size: 0.8rem; font-weight: 600;">Renner</span>
+                        <span style="background: #eee; padding: 5px 12px; font-size: 0.8rem; font-weight: 600;">Netflix</span>
+                        <span style="background: #eee; padding: 5px 12px; font-size: 0.8rem; font-weight: 600;">Shopee</span>
+                        <span style="background: #eee; padding: 5px 12px; font-size: 0.8rem; font-weight: 600;">Grupo Soma</span>
+                        <span style="background: #eee; padding: 5px 12px; font-size: 0.8rem; font-weight: 600;">HBO Max</span>
                     </div>
                 </div>
             </div>
@@ -227,45 +238,32 @@
             <div class="experience-item reveal" style="opacity: 0.6; border-top-width: 1px;">
                 <div>
                     <span class="tag">Histórico</span>
-                    <div class="exp-title" style="font-size: 1.8rem;">Luby Software</div>
+                    <div class="exp-title" style="font-size: 2rem;">Luby Software</div>
                 </div>
                 <div>
                     <div class="exp-role">Account Executive Jr.</div>
-                    <div class="exp-duration">Dez de 2021 — Out de 2022 (11 meses)</div>
-                    <p class="exp-desc">Gestão de parcerias estratégicas e vendas de software no mercado internacional.</p>
+                    <div class="exp-duration">Dez 2021 — Out 2022</div>
+                    <p>Foco em novos negócios e parcerias estratégicas em tecnologia.</p>
                 </div>
             </div>
 
             <div class="experience-item reveal" style="opacity: 0.4; border-top-width: 1px;">
                 <div>
-                    <span class="tag">Base Técnica</span>
-                    <div class="exp-title" style="font-size: 1.8rem;">Tilibra</div>
+                    <span class="tag">Base</span>
+                    <div class="exp-title" style="font-size: 2rem;">Tilibra</div>
                 </div>
                 <div>
                     <div class="exp-role">Off-Set Press Operator</div>
-                    <div class="exp-duration">Jun de 2011 — Fev de 2018 (6 anos 9 meses)</div>
-                    <p class="exp-desc">Operação técnica e melhoria contínua em processos de larga escala.</p>
+                    <div class="exp-duration">2011 — 2018</div>
+                    <p>Produção industrial e melhoria contínua de processos gráficos.</p>
                 </div>
-            </div>
-        </section>
-
-        <section class="reveal" style="display: grid; grid-template-cols: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; border-top: 1px solid #eee; padding-top: 4rem;">
-            <div>
-                <span class="tag">Formação</span>
-                <p>Publicidade e Propaganda — <strong>UNISAGRADO</strong></p>
-                <p>Design Gráfico — <strong>SENAI</strong></p>
-            </div>
-            <div>
-                <span class="tag">Global</span>
-                <p>San Diego, Califórnia (EUA) — Multicultural Experience.</p>
-                <p>Inglês Fluente (Full Professional).</p>
             </div>
         </section>
 
         <footer class="reveal">
             <span class="tag">Contato</span>
             <a href="mailto:oscar.mosca.oliveira@gmail.com" class="email-link">oscar.mosca.oliveira@gmail.com</a>
-            <a href="https://linkedin.com/in/oscarmosca" target="_blank" style="color: black; font-weight: 800; text-decoration: none; border-bottom: 2px solid var(--accenture);">LINKEDIN ↗</a>
+            <p><a href="https://linkedin.com/in/oscarmosca" target="_blank" style="color: black; font-weight: 800; text-decoration: none; border-bottom: 3px solid var(--accenture);">LINKEDIN ↗</a></p>
         </footer>
     </div>
 
@@ -275,7 +273,7 @@
             for (var i = 0; i < reveals.length; i++) {
                 var windowHeight = window.innerHeight;
                 var elementTop = reveals[i].getBoundingClientRect().top;
-                if (elementTop < windowHeight - 150) {
+                if (elementTop < windowHeight - 100) {
                     reveals[i].classList.add("active");
                 }
             }
