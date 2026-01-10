@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +33,30 @@
             padding: 2rem 0;
         }
 
-        /* ANIMAÇÕES AVANÇADAS */
+        /* LANGUAGE TOGGLE */
+        .lang-switcher {
+            position: fixed;
+            top: 20px;
+            right: 5%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            font-weight: 800;
+            cursor: pointer;
+            font-size: 0.8rem;
+            padding: 5px 10px;
+        }
+
+        .lang-btn.active { color: var(--accenture); border-bottom: 2px solid var(--accenture); }
+
+        /* ANIMATIONS */
         @keyframes text-focus-in {
             0% { filter: blur(12px); opacity: 0; letter-spacing: -0.2em; }
             100% { filter: blur(0); opacity: 1; letter-spacing: -0.07em; }
@@ -44,32 +67,12 @@
             100% { transform: translateY(0); opacity: 1; }
         }
 
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
 
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* HEADER / HERO */
-        header {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        h1 { 
-            font-size: clamp(4.5rem, 20vw, 16rem); 
-            margin: 0; 
-            font-weight: 800;
-            text-transform: uppercase;
-            animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-        }
+        /* HERO SECTION */
+        header { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+        h1 { font-size: clamp(4.5rem, 20vw, 16rem); margin: 0; font-weight: 800; text-transform: uppercase; animation: text-focus-in 1s both; }
 
         .hero-position-box {
             display: inline-block;
@@ -80,151 +83,95 @@
             animation: slide-in-bottom 0.8s ease-out 0.4s both;
         }
 
-        .hero-position-box h2 {
-            font-size: clamp(1.2rem, 3.5vw, 3rem);
-            margin: 0;
-            font-weight: 800;
-        }
+        .hero-position-box h2 { font-size: clamp(1.2rem, 3.5vw, 3rem); margin: 0; font-weight: 800; }
+        .tagline { font-size: clamp(1rem, 2vw, 1.5rem); margin-top: 1.5rem; font-weight: 300; max-width: 600px; color: #555; line-height: 1.4; animation: slide-in-bottom 0.8s ease-out 0.6s both; }
+        .hero-link { display: inline-block; margin-top: 1.5rem; font-weight: 800; text-decoration: none; color: black; border-bottom: 2px solid var(--accenture); padding-bottom: 4px; text-transform: uppercase; letter-spacing: 0.1em; animation: slide-in-bottom 0.8s ease-out 0.8s both; }
 
-        .tagline {
-            font-size: clamp(1rem, 2vw, 1.5rem);
-            margin-top: 1.5rem;
-            font-weight: 300;
-            max-width: 600px;
-            color: #555;
-            line-height: 1.4;
-            animation: slide-in-bottom 0.8s ease-out 0.6s both;
-        }
-
-        .hero-link {
-            display: inline-block;
-            margin-top: 1.5rem;
-            font-weight: 800;
-            text-decoration: none;
-            color: black;
-            border-bottom: 2px solid var(--accenture);
-            padding-bottom: 4px;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            animation: slide-in-bottom 0.8s ease-out 0.8s both;
-        }
-
-        /* TIMELINE */
+        /* EXPERIENCE */
         section { margin-top: 15vh; }
-        
-        .section-tag { 
-            font-weight: 800; 
-            text-transform: uppercase; 
-            font-size: 0.75rem; 
-            letter-spacing: 0.2em;
-            margin-bottom: 2rem;
-            display: block;
-        }
-
-        .experience-item {
-            border-top: 1px solid var(--text);
-            padding: 4rem 2rem;
-            display: grid;
-            grid-template-cols: 1fr 2fr;
-            gap: 2rem;
-            transition: all 0.3s;
-            margin: 0 -2rem;
-        }
-
+        .section-tag { font-weight: 800; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.2em; margin-bottom: 2rem; display: block; }
+        .experience-item { border-top: 1px solid var(--text); padding: 4rem 2rem; display: grid; grid-template-cols: 1fr 2fr; gap: 2rem; transition: all 0.3s; margin: 0 -2rem; }
         .experience-item:hover { background-color: var(--gray); }
-
         .meli-border { border-top: 10px solid var(--meli); }
         .pin-border { border-top: 1px solid var(--pinterest); }
-        
         .title-container { display: flex; align-items: center; gap: 20px; margin-bottom: 1rem; }
         .company-logo { width: 50px; height: 50px; object-fit: contain; }
-
         .exp-title { font-size: clamp(2rem, 5vw, 4rem); font-weight: 800; margin: 0; letter-spacing: -0.02em; }
         .exp-role { font-size: 1.4rem; font-weight: 500; margin-bottom: 0.5rem; }
         .exp-duration { font-size: 0.85rem; font-weight: 600; color: #777; margin-bottom: 1.5rem; text-transform: uppercase; }
-
         .skills-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.5rem; }
         .skill-tag { background: #000; color: #fff; padding: 6px 14px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; }
 
         /* FOOTER */
         footer { margin-top: 20vh; padding-bottom: 10vh; border-top: 1px solid #eee; padding-top: 4rem; }
         .footer-email { font-size: clamp(1.5rem, 5vw, 4.5rem); font-weight: 800; text-decoration: none; color: black; display: block; margin-bottom: 2rem; }
-        .footer-social { display: flex; gap: 30px; }
         .footer-social a { color: black; font-weight: 800; text-decoration: none; font-size: 1.1rem; border-bottom: 2px solid var(--accenture); }
 
         @media (max-width: 768px) {
             .experience-item { grid-template-cols: 1fr; padding: 3rem 1rem; margin: 0; }
-            h1 { line-height: 0.85; }
         }
     </style>
 </head>
 <body>
+
+    <div class="lang-switcher">
+        <button class="lang-btn active" onclick="switchLang('en')">EN</button>
+        <button class="lang-btn" onclick="switchLang('pt')">PT</button>
+    </div>
 
     <div class="container">
         <header>
             <h1>OSCAR<br>OLIVEIRA</h1>
             
             <div class="hero-position-box">
-                <h2>Retail Media Specialist Manager</h2>
-                <p style="margin: 5px 0 0 0; text-transform: uppercase; font-weight: 300; letter-spacing: 0.1em;">Mercado Livre Ads @ Accenture</p>
+                <h2 id="hero-role">Retail Media Specialist Manager</h2>
+                <p id="hero-company" style="margin: 5px 0 0 0; text-transform: uppercase; font-weight: 300; letter-spacing: 0.1em;">Mercado Livre Ads @ Accenture</p>
             </div>
 
-            <p class="tagline">
-                Bridging the gap between complex advertising tools and business outcomes. 
+            <p class="tagline" id="hero-tagline">
+                Bridging the gap between complex advertising tools and business outcomes.
             </p>
 
-            <a href="https://linkedin.com/in/oscarmosca" target="_blank" class="hero-link">LinkedIn Profile ↗</a>
+            <a href="https://www.linkedin.com/in/oscarmosca" target="_blank" class="hero-link" id="hero-linkedin">LinkedIn Profile ↗</a>
         </header>
 
         <section>
-            <span class="section-tag reveal">Trajetória Profissional</span>
+            <span class="section-tag reveal" id="label-career">Professional Journey</span>
 
             <div class="experience-item meli-border reveal">
                 <div>
-                    <span class="section-tag" style="margin-bottom: 0.5rem;">Atualmente</span>
+                    <span class="section-tag" style="margin-bottom: 0.5rem;" id="label-current">Current</span>
                     <div class="title-container">
                         <img src="mercado_livre.png" alt="Meli" class="company-logo">
                         <div class="exp-title">Mercado Livre</div>
                     </div>
                 </div>
                 <div>
-                    <div class="exp-role">Retail Media Specialist Manager @ <strong>Accenture</strong></div>
-                    <div class="exp-duration">Nov 2023 — Presente</div>
-                    <p style="font-size: 1.2rem; line-height: 1.5; color: #333;">Liderança de time técnico focado em performance e insights baseados em dados para o ecossistema Mercado Ads.</p>
-                    <div class="skills-grid">
-                        <span class="skill-tag">Liderança</span>
+                    <div class="exp-role" id="meli-role">Retail Media Specialist Manager @ <strong>Accenture</strong></div>
+                    <div class="exp-duration" id="meli-date">Nov 2025 — Present</div>
+                    <p id="meli-desc" style="font-size: 1.2rem; line-height: 1.5; color: #333;">Leading a specialized team focused on maximizing performance within the Retail Media ecosystem for Mercado Libre Ads.</p>
+                    <div class="skills-grid" id="meli-skills">
+                        <span class="skill-tag">Leadership</span>
                         <span class="skill-tag">BI</span>
                         <span class="skill-tag">Retail Media</span>
-                        <span class="skill-tag">Estratégia</span>
-                        <span class="skill-tag">Marketing Ads</span>
+                        <span class="skill-tag">Strategy</span>
+                        <span class="skill-tag">Data Analysis</span>
                     </div>
                 </div>
             </div>
 
             <div class="experience-item pin-border reveal">
                 <div>
-                    <span class="section-tag" style="margin-bottom: 0.5rem;">2021 — 2023</span>
+                    <span class="section-tag" style="margin-bottom: 0.5rem;" id="label-previous">Past Projects</span>
                     <div class="title-container">
                         <img src="pinterest.png" alt="Pinterest" class="company-logo">
                         <div class="exp-title" style="color: var(--pinterest);">Pinterest</div>
                     </div>
                 </div>
                 <div>
-                    <div class="exp-role">Strategic Support for Enterprise Sales @ <strong>Accenture</strong></div>
-                    <div class="exp-duration">2 anos e 7 meses</div>
-                    <p style="font-size: 1.2rem; line-height: 1.5; color: #333;">Suporte estratégico para contas Enterprise (Renner, Netflix, Shopee) com entrega média de 10x ROI.</p>
-                </div>
-            </div>
-
-            <div class="experience-item reveal" style="opacity: 0.6;">
-                <div>
-                    <div class="exp-title" style="font-size: 2rem;">Luby Software</div>
-                </div>
-                <div>
-                    <div class="exp-role">Account Executive Jr.</div>
-                    <div class="exp-duration">Dez 2021 — Out 2022</div>
-                    <p>Foco em expansão de mercado e parcerias em tecnologia.</p>
+                    <div class="exp-role" id="pin-role">Strategic Support for Enterprise Sales @ <strong>Accenture</strong></div>
+                    <div class="exp-duration" id="pin-date">Apr 2024 — Oct 2025 (1 yr 7 mos)</div>
+                    <p id="pin-desc" style="font-size: 1.2rem; line-height: 1.5; color: #333;">Direct support to Enterprise Account Managers (Renner, Netflix, Shopee). ROI increase of over 10x.</p>
                 </div>
             </div>
 
@@ -233,24 +180,68 @@
                     <div class="exp-title" style="font-size: 2rem;">Tilibra</div>
                 </div>
                 <div>
-                    <div class="exp-role">Off-Set Press Operator</div>
-                    <div class="exp-duration">2011 — 2018 (6 anos 9 meses)</div>
-                    <p>Produção industrial e controle de processos gráficos.</p>
+                    <div class="exp-role" id="tilibra-role">Off-Set Press Operator</div>
+                    <div class="exp-duration" id="tilibra-date">2011 — 2018 (6 yrs 9 mos)</div>
                 </div>
             </div>
         </section>
 
         <footer class="reveal">
-            <span class="section-tag">Contato & Conexão</span>
+            <span class="section-tag" id="label-contact">Contact & Connection</span>
             <a href="mailto:oscar.mosca.oliveira@gmail.com" class="footer-email">oscar.mosca.oliveira@gmail.com</a>
             <div class="footer-social">
-                <a href="https://linkedin.com/in/oscarmosca" target="_blank">LINKEDIN</a>
-                <a href="https://github.com/oscarmosca" target="_blank">GITHUB</a>
+                <a href="https://www.linkedin.com/in/oscarmosca" target="_blank">LINKEDIN</a>
             </div>
         </footer>
     </div>
 
     <script>
+        const content = {
+            en: {
+                heroRole: "Retail Media Specialist Manager",
+                heroTagline: "Bridging the gap between complex advertising tools and business outcomes.",
+                labelCareer: "Professional Journey",
+                labelCurrent: "Current",
+                labelPrevious: "Past Projects",
+                meliDesc: "Leading a specialized team focused on maximizing performance within the Retail Media ecosystem for Mercado Libre Ads.",
+                pinDesc: "Direct support to Enterprise Account Managers (Renner, Netflix, Shopee). ROI increase of over 10x.",
+                meliDate: "Nov 2025 — Present",
+                pinDate: "Apr 2024 — Oct 2025 (1 yr 7 mos)",
+                tilibraDate: "2011 — 2018 (6 yrs 9 mos)",
+                labelContact: "Contact & Connection"
+            },
+            pt: {
+                heroRole: "Gerente Especialista em Retail Media",
+                heroTagline: "Unindo ferramentas complexas de publicidade a resultados de negócios.",
+                labelCareer: "Trajetória Profissional",
+                labelCurrent: "Atual",
+                labelPrevious: "Projetos Anteriores",
+                meliDesc: "Liderando um time especializado focado em maximizar a performance no ecossistema de Retail Media do Mercado Livre Ads.",
+                pinDesc: "Suporte direto a Gerentes de Contas Enterprise (Renner, Netflix, Shopee). Aumento de ROI superior a 10x.",
+                meliDate: "Nov 2025 — Presente",
+                pinDate: "Abr 2024 — Out 2025 (1 ano 7 meses)",
+                tilibraDate: "2011 — 2018 (6 anos 9 meses)",
+                labelContact: "Contato & Conexão"
+            }
+        };
+
+        function switchLang(lang) {
+            document.getElementById('hero-role').innerText = content[lang].heroRole;
+            document.getElementById('hero-tagline').innerText = content[lang].heroTagline;
+            document.getElementById('label-career').innerText = content[lang].labelCareer;
+            document.getElementById('label-current').innerText = content[lang].labelCurrent;
+            document.getElementById('label-previous').innerText = content[lang].labelPrevious;
+            document.getElementById('meli-desc').innerText = content[lang].meliDesc;
+            document.getElementById('pin-desc').innerText = content[lang].pinDesc;
+            document.getElementById('meli-date').innerText = content[lang].meliDate;
+            document.getElementById('pin-date').innerText = content[lang].pinDate;
+            document.getElementById('tilibra-date').innerText = content[lang].tilibraDate;
+            document.getElementById('label-contact').innerText = content[lang].labelContact;
+
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");
             for (var i = 0; i < reveals.length; i++) {
