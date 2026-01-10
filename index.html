@@ -39,9 +39,9 @@
             top: 20px;
             right: 5%;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.9);
             padding: 10px;
-            border-radius: 8px;
+            border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
@@ -80,6 +80,7 @@
             color: white;
             padding: 1.5rem 2.5rem;
             margin-top: 1.5rem;
+            border-radius: 20px; /* ROUND CORNERS AQUI */
             animation: slide-in-bottom 0.8s ease-out 0.4s both;
         }
 
@@ -121,7 +122,7 @@
 
     <div class="container">
         <header>
-            <h1>OSCAR<br>OLIVEIRA</h1>
+            <h1 id="hero-name">OSCAR<br>OLIVEIRA</h1>
             
             <div class="hero-position-box">
                 <h2 id="hero-role">Retail Media Specialist Manager</h2>
@@ -150,7 +151,7 @@
                     <div class="exp-role" id="meli-role">Retail Media Specialist Manager @ <strong>Accenture</strong></div>
                     <div class="exp-duration" id="meli-date">Nov 2025 — Present</div>
                     <p id="meli-desc" style="font-size: 1.2rem; line-height: 1.5; color: #333;">Leading a specialized team focused on maximizing performance within the Retail Media ecosystem for Mercado Libre Ads.</p>
-                    <div class="skills-grid" id="meli-skills">
+                    <div class="skills-grid">
                         <span class="skill-tag">Leadership</span>
                         <span class="skill-tag">BI</span>
                         <span class="skill-tag">Retail Media</span>
@@ -171,7 +172,31 @@
                 <div>
                     <div class="exp-role" id="pin-role">Strategic Support for Enterprise Sales @ <strong>Accenture</strong></div>
                     <div class="exp-duration" id="pin-date">Apr 2024 — Oct 2025 (1 yr 7 mos)</div>
-                    <p id="pin-desc" style="font-size: 1.2rem; line-height: 1.5; color: #333;">Direct support to Enterprise Account Managers (Renner, Netflix, Shopee). ROI increase of over 10x.</p>
+                    <p id="pin-desc" style="font-size: 1.2rem; line-height: 1.5; color: #333;">Direct support to Enterprise Account Managers (Renner, Netflix, Shopee, Riachuelo). ROI increase of over 10x.</p>
+                </div>
+            </div>
+
+            <div class="experience-item reveal" style="opacity: 0.8;">
+                <div>
+                    <span class="section-tag" style="margin-bottom: 0.5rem;">2021 — 2022</span>
+                    <div class="exp-title" style="font-size: 2rem;">Luby Software</div>
+                </div>
+                <div>
+                    <div class="exp-role" id="luby-role">Account Executive Jr.</div>
+                    <div class="exp-duration" id="luby-date">Sep 2021 — Mar 2022 (7 mos)</div>
+                    <p id="luby-desc" style="font-size: 1.1rem; line-height: 1.5; color: #333;">Management of international accounts and custom digital solutions using SPIN and GAP Selling.</p>
+                </div>
+            </div>
+
+            <div class="experience-item reveal" style="opacity: 0.7;">
+                <div>
+                    <span class="section-tag" style="margin-bottom: 0.5rem;">2020 — 2021</span>
+                    <div class="exp-title" style="font-size: 2rem;">Mobsite</div>
+                </div>
+                <div>
+                    <div class="exp-role" id="mobsite-role">Inside Sales Representative</div>
+                    <div class="exp-duration" id="mobsite-date">Feb 2020 — May 2021 (1 yr 4 mos)</div>
+                    <p id="mobsite-desc" style="font-size: 1.1rem; line-height: 1.5; color: #333;">Inbound lead conversion and marketing campaign management for SMBs.</p>
                 </div>
             </div>
 
@@ -204,9 +229,15 @@
                 labelCurrent: "Current",
                 labelPrevious: "Past Projects",
                 meliDesc: "Leading a specialized team focused on maximizing performance within the Retail Media ecosystem for Mercado Libre Ads.",
-                pinDesc: "Direct support to Enterprise Account Managers (Renner, Netflix, Shopee). ROI increase of over 10x.",
+                pinDesc: "Direct support to Enterprise Account Managers (Renner, Netflix, Shopee, Riachuelo). ROI increase of over 10x.",
+                lubyRole: "Account Executive Jr.",
+                lubyDesc: "Management of international accounts and custom digital solutions using SPIN and GAP Selling.",
+                mobsiteRole: "Inside Sales Representative",
+                mobsiteDesc: "Inbound lead conversion and marketing campaign management for SMBs.",
                 meliDate: "Nov 2025 — Present",
                 pinDate: "Apr 2024 — Oct 2025 (1 yr 7 mos)",
+                lubyDate: "Sep 2021 — Mar 2022 (7 mos)",
+                mobsiteDate: "Feb 2020 — May 2021 (1 yr 4 mos)",
                 tilibraDate: "2011 — 2018 (6 yrs 9 mos)",
                 labelContact: "Contact & Connection"
             },
@@ -217,9 +248,15 @@
                 labelCurrent: "Atual",
                 labelPrevious: "Projetos Anteriores",
                 meliDesc: "Liderando um time especializado focado em maximizar a performance no ecossistema de Retail Media do Mercado Livre Ads.",
-                pinDesc: "Suporte direto a Gerentes de Contas Enterprise (Renner, Netflix, Shopee). Aumento de ROI superior a 10x.",
+                pinDesc: "Suporte direto a Gerentes de Contas Enterprise (Renner, Netflix, Shopee, Riachuelo). Aumento de ROI superior a 10x.",
+                lubyRole: "Executivo de Contas Jr.",
+                lubyDesc: "Gestão de contas internacionais e soluções digitais customizadas utilizando SPIN e GAP Selling.",
+                mobsiteRole: "Representante de Inside Sales",
+                mobsiteDesc: "Conversão de leads inbound e gestão de campanhas de marketing para PMEs.",
                 meliDate: "Nov 2025 — Presente",
                 pinDate: "Abr 2024 — Out 2025 (1 ano 7 meses)",
+                lubyDate: "Set 2021 — Mar 2022 (7 meses)",
+                mobsiteDate: "Fev 2020 — Mai 2021 (1 ano 4 meses)",
                 tilibraDate: "2011 — 2018 (6 anos 9 meses)",
                 labelContact: "Contato & Conexão"
             }
@@ -233,8 +270,14 @@
             document.getElementById('label-previous').innerText = content[lang].labelPrevious;
             document.getElementById('meli-desc').innerText = content[lang].meliDesc;
             document.getElementById('pin-desc').innerText = content[lang].pinDesc;
+            document.getElementById('luby-role').innerText = content[lang].lubyRole;
+            document.getElementById('luby-desc').innerText = content[lang].lubyDesc;
+            document.getElementById('mobsite-role').innerText = content[lang].mobsiteRole;
+            document.getElementById('mobsite-desc').innerText = content[lang].mobsiteDesc;
             document.getElementById('meli-date').innerText = content[lang].meliDate;
             document.getElementById('pin-date').innerText = content[lang].pinDate;
+            document.getElementById('luby-date').innerText = content[lang].lubyDate;
+            document.getElementById('mobsite-date').innerText = content[lang].mobsiteDate;
             document.getElementById('tilibra-date').innerText = content[lang].tilibraDate;
             document.getElementById('label-contact').innerText = content[lang].labelContact;
 
