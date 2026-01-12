@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#a100ff">
-    <meta name="msapplication-TileColor" content="#a100ff">
-    <meta name="theme-color" content="#ffffff">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oscar Oliveira | AdTech Leader</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://resume.oscarmosca.com.br/">
+    <meta property="og:title" content="Oscar Oliveira | AdTech & Retail Media Leader">
+    <meta property="og:description" content="Liderança técnica no Mercado Livre Ads via Accenture. Especialista em ROI e Business Intelligence.">
+    <meta property="og:image" content="https://resume.oscarmosca.com.br/meta-image.png">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -97,7 +100,7 @@
         /* EXPERIENCE */
         section { margin-top: 15vh; }
         .section-tag { font-weight: 800; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.2em; margin-bottom: 2rem; display: block; }
-        .experience-item { border-top: 1px solid var(--text); padding: 4rem 2rem; display: grid; grid-template-cols: 1fr 2fr; gap: 2rem; transition: all 0.4s; margin: 0 -2rem; }
+        .experience-item { border-top: 1px solid var(--text); padding: 4rem 2rem; display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; transition: all 0.4s; margin: 0 -2rem; }
         .experience-item:hover { background-color: var(--gray); }
         .meli-border { border-top: 10px solid var(--meli); }
         .pin-border { border-top: 1px solid var(--pinterest); }
@@ -106,15 +109,17 @@
         .exp-role { font-size: 1.4rem; font-weight: 500; margin-bottom: 0.5rem; }
         .exp-duration { font-size: 0.85rem; font-weight: 600; color: #777; margin-bottom: 1.5rem; text-transform: uppercase; }
 
-        /* TAGS */
+        /* TAGS & BRAND WALL */
         .tags-container { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.5rem; }
         .skill-tag { background: #000; color: #fff; padding: 6px 14px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; transition: 0.3s; }
-        .client-tag { background: #eee; color: #333; padding: 6px 14px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; }
+        .client-tag { background: #eee; color: #333; padding: 6px 14px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; transition: 0.3s; }
+        .client-tag:hover { background: #ddd; color: #000; transform: scale(1.05); }
         .skill-tag:hover { background: var(--accenture); transform: translateY(-2px); }
 
         /* FOOTER */
         footer { margin-top: 20vh; padding-bottom: 10vh; border-top: 1px solid #eee; padding-top: 4rem; }
-        .footer-email { font-size: clamp(1.5rem, 5vw, 4.5rem); font-weight: 800; text-decoration: none; color: black; display: block; margin-bottom: 2rem; }
+        .footer-email { font-size: clamp(1.5rem, 5vw, 4.5rem); font-weight: 800; text-decoration: none; color: black; display: block; margin-bottom: 2rem; transition: color 0.3s; }
+        .footer-email:hover { color: var(--accenture); }
 
         @media (max-width: 768px) {
             .experience-item { grid-template-cols: 1fr; padding: 3rem 1rem; margin: 0; }
@@ -151,7 +156,7 @@
         <section class="about-section reveal">
             <span class="section-tag" id="label-about">About</span>
             <div class="about-text" id="about-content">
-                From <strong>industrial precision</strong> [cite: 87, 91] at Tilibra to <strong>AdTech leadership</strong> [cite: 26, 50] at Mercado Livre. I combine analytical discipline [cite: 33] with a deep understanding of media ecosystems [cite: 27] to drive growth for global enterprise brands[cite: 42].
+                From <strong>industrial precision</strong> at Tilibra to <strong>AdTech leadership</strong> at Mercado Livre. I combine analytical discipline with a deep understanding of media ecosystems to drive growth for global enterprise brands.
             </div>
         </section>
 
@@ -168,8 +173,8 @@
                 </div>
                 <div>
                     <div class="exp-role" id="meli-role">Retail Media Specialist Manager @ <strong>Accenture</strong></div>
-                    <div class="exp-duration" id="meli-date">Nov 2025 — Present</div>
-                    <p id="meli-desc" style="font-size: 1.2rem; line-height: 1.5; color: #333;">Leading a specialized team focused on maximizing performance within the Retail Media ecosystem for Mercado Ads[cite: 51, 52].</p>
+                    <div class="exp-duration" id="meli-date">Nov 2023 — Present</div>
+                    <p id="meli-desc" style="font-size: 1.2rem; line-height: 1.5; color: #333;">Leading a specialized team focused on maximizing performance within the Retail Media ecosystem for Mercado Ads.</p>
                     <div class="tags-container" id="meli-skills"></div>
                 </div>
             </div>
@@ -184,12 +189,12 @@
                 </div>
                 <div>
                     <div class="exp-role" id="pin-role">Strategic Support for Enterprise Sales @ <strong>Accenture</strong></div>
-                    <div class="exp-duration" id="pin-date">Apr 2024 — Oct 2025 (1 yr 7 mos)</div>
-                    <p id="pin-desc" style="font-size: 1.2rem; line-height: 1.5; color: #333;">Direct support to Enterprise Account Managers. Delivering an average ROI increase of over 10x[cite: 41, 42].</p>
+                    <div class="exp-duration" id="pin-date">Apr 2021 — Oct 2023</div>
+                    <p id="pin-desc" style="font-size: 1.2rem; line-height: 1.5; color: #333;">Direct support to Enterprise Account Managers. Delivering an average ROI increase of over 10x through tailored strategies.</p>
                     <div class="tags-container" id="pin-skills"></div>
-                    <span class="section-tag" style="margin-top: 1.5rem; margin-bottom: 0.8rem; font-size: 0.65rem;" id="label-clients">Enterprise Clients:</span>
+                    <span class="section-tag" style="margin-top: 1.5rem; margin-bottom: 0.8rem; font-size: 0.65rem;" id="label-clients">Enterprise Clients & Brands:</span>
                     <div class="tags-container">
-                        <span class="client-tag">Renner</span><span class="client-tag">Netflix</span><span class="client-tag">Shopee</span><span class="client-tag">Riachuelo</span><span class="client-tag">Grupo Soma</span><span class="client-tag">HBO Max</span>
+                        <span class="client-tag">Renner</span><span class="client-tag">Netflix</span><span class="client-tag">Shopee</span><span class="client-tag">Riachuelo</span><span class="client-tag">Grupo Soma</span><span class="client-tag">HBO Max</span><span class="client-tag">Disney+</span>
                     </div>
                 </div>
             </div>
@@ -198,7 +203,8 @@
                 <div><div class="exp-title" style="font-size: 2rem;">Luby Software</div></div>
                 <div>
                     <div class="exp-role" id="luby-role">Account Executive Jr.</div>
-                    <div class="exp-duration" id="luby-date">Sep 2021 — Mar 2022 [cite: 65]</div>
+                    <div class="exp-duration" id="luby-date">Sep 2021 — Mar 2022</div>
+                    <p style="font-size: 1.1rem; line-height: 1.5; color: #333;" id="luby-desc">Management of international accounts and custom digital solutions.</p>
                     <div class="tags-container" id="luby-skills"></div>
                 </div>
             </div>
@@ -207,16 +213,17 @@
                 <div><div class="exp-title" style="font-size: 2rem;">Mobsite</div></div>
                 <div>
                     <div class="exp-role" id="mobsite-role">Inside Sales Representative</div>
-                    <div class="exp-duration" id="mobsite-date">Feb 2020 — May 2021 [cite: 76]</div>
+                    <div class="exp-duration" id="mobsite-date">Feb 2020 — May 2021</div>
+                    <p style="font-size: 1.1rem; line-height: 1.5; color: #333;" id="mobsite-desc">Inbound lead conversion and marketing campaign management for SMBs.</p>
                     <div class="tags-container" id="mobsite-skills"></div>
                 </div>
             </div>
 
-            <div class="experience-item reveal" style="opacity: 0.4;">
+            <div class="experience-item reveal" style="opacity: 0.5;">
                 <div><div class="exp-title" style="font-size: 2rem;">Tilibra</div></div>
                 <div>
                     <div class="exp-role" id="tilibra-role">Off-Set Press Operator</div>
-                    <div class="exp-duration" id="tilibra-date">2011 — 2018 (6 yrs 9 mos) [cite: 88]</div>
+                    <div class="exp-duration" id="tilibra-date">2011 — 2018</div>
                     <div class="tags-container" id="tilibra-skills"></div>
                 </div>
             </div>
@@ -225,7 +232,9 @@
         <footer class="reveal">
             <span class="section-tag" id="label-contact">Contact</span>
             <a href="mailto:contato@oscarmosca.com.br" class="footer-email">contato@oscarmosca.com.br</a>
-            <div class="footer-social"><a href="https://www.linkedin.com/in/oscarmosca" target="_blank">LINKEDIN</a></div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/oscarmosca" target="_blank">LINKEDIN</a>
+            </div>
         </footer>
     </div>
 
@@ -238,13 +247,20 @@
                 labelAbout: "About",
                 aboutContent: "From <strong>industrial precision</strong> at Tilibra to <strong>AdTech leadership</strong> at Mercado Livre. I combine analytical discipline with a deep understanding of media ecosystems to drive growth for global enterprise brands.",
                 labelCareer: "Professional Journey", labelCurrent: "Current", labelPrevious: "Past Projects",
-                labelContact: "Contact", labelClients: "Enterprise Clients:",
+                labelContact: "Contact", labelClients: "Enterprise Clients & Brands:",
                 meliDesc: "Leading a specialized team focused on maximizing performance within the Retail Media ecosystem for Mercado Ads.",
+                lubyDesc: "Management of international accounts and custom digital solutions.",
+                mobsiteDesc: "Inbound lead conversion and marketing campaign management for SMBs.",
+                meliDate: "Nov 2023 — Present",
+                pinDate: "Apr 2021 — Oct 2023 (2 yrs 7 mos)",
+                lubyDate: "Sep 2021 — Mar 2022 (7 mos)",
+                mobsiteDate: "Feb 2020 — May 2021 (1 yr 4 mos)",
+                tilibraDate: "2011 — 2018 (6 yrs 9 mos)",
                 meliSkills: ["Leadership", "BI", "Retail Media", "Strategy", "Data Analysis"],
-                pinSkills: ["Enterprise Sales", "ROI Optimization", "Ads Manager"],
-                lubySkills: ["SPIN Selling", "Negotiation"],
-                mobsiteSkills: ["Lead Qualification", "Inbound Sales"],
-                tilibraSkills: ["Quality Control", "Process Optimization"]
+                pinSkills: ["Enterprise Sales", "ROI Optimization", "Full-Funnel Media", "Ads Manager"],
+                lubySkills: ["SPIN Selling", "GAP Selling", "International Sales", "Negotiation"],
+                mobsiteSkills: ["Lead Qualification", "Pipedrive CRM", "RD Station", "Inbound Sales"],
+                tilibraSkills: ["Quality Control", "Process Optimization", "Continuous Improvement"]
             },
             pt: {
                 heroRole: "Gerente Especialista em Retail Media",
@@ -253,13 +269,20 @@
                 labelAbout: "Sobre",
                 aboutContent: "Da <strong>precisão industrial</strong> na Tilibra à <strong>liderança em AdTech</strong> no Mercado Livre. Combino disciplina analítica com um profundo conhecimento dos ecossistemas de mídia para impulsionar o crescimento de grandes marcas.",
                 labelCareer: "Trajetória Profissional", labelCurrent: "Atual", labelPrevious: "Projetos Anteriores",
-                labelContact: "Contato", labelClients: "Clientes Enterprise:",
+                labelContact: "Contato", labelClients: "Clientes Enterprise & Marcas:",
                 meliDesc: "Liderando um time especializado focado em maximizar a performance no ecossistema de Retail Media do Mercado Livre Ads.",
+                lubyDesc: "Gestão de contas internacionais e soluções digitais customizadas.",
+                mobsiteDesc: "Conversão de leads inbound e gestão de campanhas de marketing para PMEs.",
+                meliDate: "Nov 2023 — Presente",
+                pinDate: "Abr 2021 — Out 2023 (2 anos 7 meses)",
+                lubyDate: "Set 2021 — Mar 2022 (7 meses)",
+                mobsiteDate: "Fev 2020 — Mai 2021 (1 ano 4 meses)",
+                tilibraDate: "2011 — 2018 (6 anos 9 meses)",
                 meliSkills: ["Liderança", "BI", "Retail Media", "Estratégia", "Análise de Dados"],
-                pinSkills: ["Vendas Enterprise", "Otimização de ROI", "Ads Manager"],
-                lubySkills: ["SPIN Selling", "Negociação"],
-                mobsiteSkills: ["Qualificação de Leads", "Vendas Inbound"],
-                tilibraSkills: ["Controle de Qualidade", "Otimização de Processos"]
+                pinSkills: ["Vendas Enterprise", "Otimização de ROI", "Mídia Full-Funnel", "Ads Manager"],
+                lubySkills: ["SPIN Selling", "GAP Selling", "Vendas Internacionais", "Negociação"],
+                mobsiteSkills: ["Qualificação de Leads", "Pipedrive CRM", "RD Station", "Vendas Inbound"],
+                tilibraSkills: ["Controle de Qualidade", "Otimização de Processos", "Melhoria Contínua"]
             }
         };
 
@@ -275,6 +298,13 @@
             document.getElementById('label-contact').innerText = content[lang].labelContact;
             document.getElementById('label-clients').innerText = content[lang].labelClients;
             document.getElementById('meli-desc').innerText = content[lang].meliDesc;
+            document.getElementById('luby-desc').innerText = content[lang].lubyDesc;
+            document.getElementById('mobsite-desc').innerText = content[lang].mobsiteDesc;
+            document.getElementById('meli-date').innerText = content[lang].meliDate;
+            document.getElementById('pin-date').innerText = content[lang].pinDate;
+            document.getElementById('luby-date').innerText = content[lang].lubyDate;
+            document.getElementById('mobsite-date').innerText = content[lang].mobsiteDate;
+            document.getElementById('tilibra-date').innerText = content[lang].tilibraDate;
 
             const updateTags = (id, tags) => {
                 document.getElementById(id).innerHTML = tags.map(t => `<span class="skill-tag">${t}</span>`).join('');
