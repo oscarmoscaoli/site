@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N4C8D5HD');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Oscar Oliveira</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#FF6B00">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #000000;
+            --orange: #FF6B00;
+            --gray: #f8f8f8;
+            --text-muted: #555555;
+            --border-color: #000000;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0b0b0b;
+            --text: #ffffff;
+            --gray: #161616;
+            --text-muted: #aaaaaa;
+            --border-color: #ffffff;
+        }
+
+        * { box-sizing: border-box; transition: background-color 0.3s ease, color 0.3s ease; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container { 
+            width: 90%;
+            max-width: 900px; 
+            margin: 0 auto; 
+            padding: 4rem 0;
+        }
+
+        .controls-wrapper {
+            position: fixed;
+            top: 20px;
+            right: 5%;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+
+        .floating-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 4px;
+            border-radius: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+        }
+
+        [data-theme="dark"] .floating-panel {
+            background: rgba(20, 20, 20, 0.85);
+            border: 1px solid rgba(255,255,255,0.05);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+
+        .lang-btn, .theme-toggle-btn {
+            background: none; border: none; color: var(--text); font-weight: 800; cursor: pointer; font-size: 0.75rem; padding: 6px 14px; border-radius: 20px; transition: all 0.2s ease;
+        }
+
+        .lang-btn.active { background: var(--orange); color: white; }
+        .theme-toggle-btn { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; padding: 0; }
+
+        header { margin-bottom: 3rem; }
+        h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; text-transform: uppercase; letter-spacing: -0.02em; margin: 0 0 1rem 0; line-height: 1; }
+        
+        .back-link { font-weight: 800; text-decoration: none; color: var(--orange); text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 6px; margin-bottom: 2rem; }
+        
+        h2 { font-size: 1.8rem; font-weight: 800; text-transform: uppercase; margin-top: 2.5rem; margin-bottom: 1rem; border-left: 4px solid var(--orange); padding-left: 12px; letter-spacing: -0.01em; }
+        p, ul { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1.5rem; }
+        ul { padding-left: 1.5rem; }
+        li { margin-bottom: 0.5rem; }
+
+        footer { margin-top: 4rem; border-top: 1px solid var(--gray); padding-top: 2rem; text-align: center; }
+        .footer-text { font-size: 0.9rem; color: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4C8D5HD"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="controls-wrapper">
+        <div class="floating-panel">
+            <button class="lang-btn" id="btn-lang-en" onclick="switchLang('en')">EN</button>
+            <button class="lang-btn" id="btn-lang-pt" onclick="switchLang('pt')">PT</button>
+        </div>
+        <div class="floating-panel">
+            <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+                <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <a href="index.html" class="back-link" id="link-back">← Back to Portfolio</a>
+        
+        <header>
+            <h1 id="policy-title">Privacy Policy</h1>
+            <p id="policy-subtitle">Last updated: June 2026</p>
+        </header>
+
+        <main id="policy-content">
+            <!-- Content dynamically populated by JS -->
+        </main>
+
+        <footer>
+            <p class="footer-text">© 2026 Oscar Oliveira. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        const content = {
+            en: {
+                linkBack: "← Back to Portfolio",
+                policyTitle: "Privacy Policy",
+                policySubtitle: "Last updated: June 2026",
+                html: `
+                    <p>Your privacy is important to us. It is Oscar Oliveira's policy to respect your privacy regarding any information we may collect from you across our website, <a href="https://resume.oscarmosca.com.br" style="color: var(--orange); text-decoration: none; font-weight: 600;">resume.oscarmosca.com.br</a>.</p>
+                    
+                    <h2>1. Information We Collect</h2>
+                    <p>We only ask for personal information when we truly need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent. We also let you know why we’re collecting it and how it will be used.</p>
+                    
+                    <h2>2. Cookies and Tracking Technologies</h2>
+                    <p>This website integrates advanced analytical and marketing scripts to optimize performance and review user experience structures. These third-party services deploy cookies and pixel tracking codes as detailed below:</p>
+                    <ul>
+                        <li><strong>Google Analytics / Google Tag Manager:</strong> Used to monitor general web traffic parameters, user acquisition channels, and generic performance metrics anonymously.</li>
+                        <li><strong>Meta Pixel (Facebook/Instagram):</strong> Monitors full activations and cross-platform conversions to serve personalized professional advertising and retargeting metrics.</li>
+                        <li><strong>Pinterest Tag:</strong> Evaluates campaign conversion lifecycles and business metric interactions across AdTech funnels.</li>
+                        <li><strong>Microsoft Clarity:</strong> Captures structural user behavior, click heatmaps, and session session replays anonymously to identify optimization boundaries.</li>
+                        <li><strong>LinkedIn Insight Tag:</strong> Validates B2B demographic traits, professional parameters, and retargeting framework funnels.</li>
+                    </ul>
+
+                    <h2>3. Data Retention and Protection</h2>
+                    <p>We only retain collected information for as long as necessary to provide you with your requested service. What data we store, we’ll protect within commercially acceptable means to prevent loss and theft, as well as unauthorized access, disclosure, copying, use, or modification.</p>
+
+                    <h2>4. Third-Party Disclosures</h2>
+                    <p>Our website may link to external sites that are not operated by us. Please be aware that we have no control over the content and practices of these sites, and cannot accept responsibility or liability for their respective privacy policies.</p>
+
+                    <h2>5. User Rights and Consent</h2>
+                    <p>You are free to refuse our request for your personal information, with the understanding that we may be unable to provide you with some of your desired services. Your continued use of our website will be regarded as acceptance of our practices around privacy and personal information.</p>
+                `
+            },
+            pt: {
+                linkBack: "← Voltar ao Portfólio",
+                policyTitle: "Política de Privacidade",
+                policySubtitle: "Última atualização: Junho de 2026",
+                html: `
+                    <p>Sua privacidade é importante para nós. É política de Oscar Oliveira respeitar a sua privacidade em relação a qualquer informação que possamos coletar no site <a href="https://resume.oscarmosca.com.br" style="color: var(--orange); text-decoration: none; font-weight: 600;">resume.oscarmosca.com.br</a>.</p>
+                    
+                    <h2>1. Informações que Coletamos</h2>
+                    <p>Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Também informamos por que estamos coletando e como será usado.</p>
+                    
+                    <h2>2. Cookies e Tecnologias de Rastreamento</h2>
+                    <p>Este site integra scripts analíticos e de marketing avançados para otimizar o desempenho e revisar as estruturas de experiência do usuário. Esses serviços terceiros utilizam cookies e códigos de rastreamento por pixel conforme detalhado abaixo:</p>
+                    <ul>
+                        <li><strong>Google Analytics / Google Tag Manager:</strong> Usado para monitorar parâmetros de tráfego web geral, canais de aquisição de usuários e métricas de desempenho genéricas de forma anônima.</li>
+                        <li><strong>Meta Pixel (Facebook/Instagram):</strong> Monitora ativações completas e conversões cruzadas de plataforma para veicular publicidade profissional personalizada e métricas de retargeting.</li>
+                        <li><strong>Pinterest Tag:</strong> Avalia ciclos de conversão de campanhas e interações de métricas de negócios em funis de AdTech.</li>
+                        <li><strong>Microsoft Clarity:</strong> Captura o comportamento estrutural do usuário, mapas de calor de cliques e replays de sessão de forma anônima para identificar barreiras de otimização.</li>
+                        <li><strong>LinkedIn Insight Tag:</strong> Valida traços demográficos B2B, parâmetros profissionais e funis de framework de retargeting.</li>
+                    </ul>
+
+                    <h2>3. Retenção e Proteção de Dados</h2>
+                    <p>Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado. Quando armazenamos dados, os protegemos dentro de meios comercialmente aceitáveis para evitar perdas e roubos, bem como acesso, divulgação, cópia, uso ou modificação não autorizados.</p>
+
+                    <h2>4. Divulgação para Terceiros</h2>
+                    <p>O nosso site pode ter links para sites externos que não são operados por nós. Esteja ciente de que não temos controle sobre o conteúdo e práticas desses sites e não podemos aceitar responsabilidade por suas respectivas políticas de privacidade.</p>
+
+                    <h2>5. Direitos do Usuário e Consentimento</h2>
+                    <p>Você é livre para recusar a nossa solicitação de informações pessoais, entendendo que talvez não possamos fornecer alguns dos serviços desejados. O uso continuado de nosso site será considerado como aceitação de nossas práticas em torno de privacidade e informações pessoais.</p>
+                `
+            }
+        };
+
+        function switchLang(lang) {
+            document.getElementById('link-back').innerText = content[lang].linkBack;
+            document.getElementById('policy-title').innerText = content[lang].policyTitle;
+            document.getElementById('policy-subtitle').innerText = content[lang].policySubtitle;
+            document.getElementById('policy-content').innerHTML = content[lang].html;
+
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            if(lang === 'en') document.getElementById('btn-lang-en').classList.add('active');
+            if(lang === 'pt') document.getElementById('btn-lang-pt').classList.add('active');
+        }
+
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                updateThemeIcon('dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                updateThemeIcon('light');
+            }
+        }
+
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        }
+
+        function updateThemeIcon(theme) {
+            const iconSvg = document.getElementById('theme-icon');
+            if (theme === 'dark') {
+                iconSvg.innerHTML = '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
+            } else {
+                iconSvg.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
+            }
+        }
+
+        window.onload = () => {
+            initTheme();
+            const userLang = navigator.language || navigator.userLanguage;
+            if (userLang.startsWith('pt')) { switchLang('pt'); } else { switchLang('en'); }
+        };
+    </script>
+</body>
+</html>
