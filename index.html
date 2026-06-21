@@ -14,7 +14,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://resume.oscarmosca.com.br/">
     <meta property="og:title" content="Oscar Oliveira | AdTech & Retail Media Leader">
-    <meta property="og:description" content="Resultados comprovados em AdTech: redução de specialists bottom performance de 30% para <10% no Mercado Livre Ads e campanhas com mais de 10x ROI no Pinterest.">
+    <meta property="og:description" content="Resultados comprovados em AdTech: redução de especialistas bottom performance de 30% para <10% no Mercado Livre Ads e campanhas com mais de 10x ROI no Pinterest.">
     <meta property="og:image" content="https://resume.oscarmosca.com.br/meta-image.png">
 
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -59,25 +59,26 @@
             color: var(--text);
             font-family: 'Inter', sans-serif;
             margin: 0;
-            line-height: 1.2;
+            line-height: 1.3;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
         .container { 
             width: 90%;
             max-width: 1400px; 
             margin: 0 auto; 
-            padding: 2rem 0;
+            padding: 1rem 0;
         }
 
-        /* CONTAINER DOS CONTROLES FLUTUANTES */
+        /* CONTROLES FLUTUANTES RESPONSIVOS */
         .controls-wrapper {
             position: fixed;
-            top: 20px;
+            top: 15px;
             right: 5%;
             z-index: 1000;
             display: flex;
-            gap: 10px;
+            gap: 8px;
         }
 
         .floating-panel {
@@ -98,78 +99,48 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.4);
         }
 
-        /* BOTÕES DE IDIOMA */
-        .lang-btn {
-            background: none;
-            border: none;
-            color: #000000;
-            font-weight: 800;
-            cursor: pointer;
-            font-size: 0.75rem;
-            padding: 6px 14px;
-            border-radius: 20px;
-            transition: background-color 0.2s ease, color 0.2s ease;
+        .lang-btn, .theme-toggle-btn {
+            background: none; border: none; color: var(--text); font-weight: 800; cursor: pointer; font-size: 0.75rem; padding: 6px 12px; border-radius: 20px; transition: all 0.2s ease;
         }
 
-        [data-theme="dark"] .lang-btn {
-            color: #ffffff;
-        }
+        .lang-btn.active { background: var(--orange); color: white; }
+        .theme-toggle-btn { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; padding: 0; }
 
-        .floating-panel .lang-btn.active {
-            background-color: var(--orange) !important;
-            color: #ffffff !important;
-        }
-
-        /* BOTÃO DE TEMA */
-        .theme-toggle-btn {
-            background: none;
-            border: none;
-            color: var(--text);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 32px;
-            height: 32px;
-            border-radius: 20px;
-            transition: all 0.2s ease;
-        }
-
-        /* HERO SECTION */
-        header { min-height: 50vh; display: flex; flex-direction: column; justify-content: center; padding: 2rem 0 0 0; }
-        h1 { font-size: clamp(4rem, 16vw, 13rem); margin: 0; font-weight: 800; text-transform: uppercase; letter-spacing: -0.02em; line-height: 0.9; }
+        /* HERO SECTION MOBILE FRIENDLY */
+        header { min-height: 60vh; display: flex; flex-direction: column; justify-content: center; padding: 5rem 0 2rem 0; }
+        h1 { font-size: clamp(3rem, 14vw, 11rem); margin: 0; font-weight: 800; text-transform: uppercase; letter-spacing: -0.03em; line-height: 0.85; }
 
         .hero-position-box {
-            display: inline-block; background-color: var(--orange); color: white; padding: 1.2rem 2.2rem;
-            margin-top: 1.5rem; border-radius: 20px; animation: slide-in-bottom 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0.3s both;
+            display: inline-block; background-color: var(--orange); color: white; padding: 1rem 1.8rem;
+            margin-top: 1.5rem; border-radius: 16px;
             box-shadow: 0 10px 30px rgba(255, 107, 0, 0.15);
             max-width: fit-content;
         }
 
-        .hero-position-box h2 { font-size: clamp(1.1rem, 2.5vw, 2.2rem); margin: 0; font-weight: 800; }
-        .hero-position-box p { margin: 5px 0 0 0; text-transform: uppercase; font-weight: 500; letter-spacing: 0.1em; font-size: 0.85rem; }
+        .hero-position-box h2 { font-size: clamp(1rem, 2.5vw, 2rem); margin: 0; font-weight: 800; line-height: 1.1; }
+        .hero-position-box p { margin: 4px 0 0 0; text-transform: uppercase; font-weight: 500; letter-spacing: 0.1em; font-size: clamp(0.7rem, 1.5vw, 0.85rem); }
         
-        .hero-actions { display: flex; gap: 20px; align-items: center; margin-top: 2rem; animation: slide-in-bottom 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0.5s both; flex-wrap: wrap; }
-        .download-btn { background: var(--text); color: var(--bg); text-decoration: none; padding: 14px 28px; border-radius: 40px; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1); border: 2px solid transparent; }
+        .hero-actions { display: flex; gap: 16px; align-items: center; margin-top: 2.5rem; flex-wrap: wrap; }
+        .download-btn { background: var(--text); color: var(--bg); text-decoration: none; padding: 14px 28px; border-radius: 40px; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1); border: 2px solid transparent; text-align: center; }
         .download-btn:hover { background: transparent; color: var(--text); border-color: var(--text); transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
 
-        .header-social-links { display: flex; gap: 15px; margin-top: 0.5rem; }
-        .header-icon-link { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50px; background: var(--gray); color: var(--text); transition: all 0.3s; }
+        .header-social-links { display: flex; gap: 12px; }
+        .header-icon-link { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50px; background: var(--gray); color: var(--text); transition: all 0.3s; }
         .header-icon-link:hover { background: var(--text); color: var(--bg); transform: translateY(-3px); }
         .header-icon-link svg { width: 18px; height: 18px; fill: currentColor; }
 
-        /* ABOUT / BIO SECTION */
-        .about-section { margin-top: 8vh; max-width: 1100px; animation: slide-in-bottom 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0.6s both; }
-        .about-text { font-size: clamp(1.2rem, 2.5vw, 2rem); line-height: 1.4; font-weight: 400; color: var(--text-muted); }
+        /* ABOUT SECTION */
+        .about-section { margin-top: 6vh; max-width: 1100px; }
+        .about-text { font-size: clamp(1.15rem, 2.3vw, 1.85rem); line-height: 1.4; font-weight: 400; color: var(--text-muted); }
         .about-text strong { color: var(--text); font-weight: 800; }
 
-        /* EXPERIENCE TIMELINE */
-        section { margin-top: 12vh; }
-        .section-tag { font-weight: 800; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.2em; margin-bottom: 2.5rem; display: block; color: var(--text-muted); }
+        /* TIMELINE EXPERIÊNCIAS RESPONSIVO COM CSS GRID */
+        section { margin-top: 10vh; }
+        .section-tag { font-weight: 800; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.2em; margin-bottom: 2rem; display: block; color: var(--text-muted); }
         
-        .experience-item { border-top: 4px solid var(--border-color); padding: 4rem 2rem; display: grid; grid-template-columns: 1fr 2.2fr; gap: 3rem; transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); margin: 0 -2rem; border-radius: 20px; }
-        .experience-item:hover { background-color: var(--gray); transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.03); }
-        [data-theme="dark"] .experience-item:hover { box-shadow: 0 15px 40px rgba(0,0,0,0.2); }
+        .experience-item { border-top: 4px solid var(--border-color); padding: 3rem 1rem; display: grid; grid-template-columns: 1fr 2.2fr; gap: 2rem; transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); margin: 0 -1rem; border-radius: 16px; }
+        .experience-item:hover { background-color: var(--gray); transform: translateY(-4px); box-shadow: 0 12px 35px rgba(0,0,0,0.03); }
+        [data-theme="dark"] .experience-item:hover { box-shadow: 0 12px 35px rgba(0,0,0,0.2); }
         
         .meli-border:hover { border-top: 10px solid var(--meli); }
         .accenture-border:hover { border-top: 10px solid var(--accenture); }
@@ -178,45 +149,54 @@
         .mobsite-border:hover { border-top: 10px solid var(--mobsite); }
         .tilibra-border:hover { border-top: 10px solid var(--tilibra); }
         
-        .title-container { display: flex; align-items: center; gap: 15px; }
-        .company-logo { width: 45px; height: 45px; object-fit: contain; transition: transform 0.3s ease; }
-        .experience-item:hover .company-logo { transform: scale(1.1); }
+        .title-container { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+        .company-logo { width: 40px; height: 40px; object-fit: contain; transition: transform 0.3s ease; }
+        .experience-item:hover .company-logo { transform: scale(1.08); }
         
-        .exp-title { font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 800; margin: 0; letter-spacing: -0.02em; }
-        .exp-role { font-size: 1.4rem; font-weight: 600; margin-bottom: 0.5rem; }
-        .exp-duration { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
-        .exp-bullets { margin: 1.2rem 0; padding-left: 1.2rem; color: var(--text-muted); font-size: 1.05rem; line-height: 1.6; }
-        .exp-bullets li { margin-bottom: 0.5rem; }
+        .exp-title { font-size: clamp(1.6rem, 3.5vw, 2.6rem); font-weight: 800; margin: 0; letter-spacing: -0.02em; }
+        .exp-role { font-size: clamp(1.15rem, 1.8vw, 1.4rem); font-weight: 600; margin-bottom: 0.4rem; color: var(--text); }
+        .exp-duration { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); margin-bottom: 1.2rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .exp-bullets { margin: 1rem 0; padding-left: 1.1rem; color: var(--text-muted); font-size: 1rem; line-height: 1.5; }
+        .exp-bullets li { margin-bottom: 0.4rem; }
 
-        /* TAGS & CERTIFICATIONS LINKS */
-        .tags-container { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.5rem; }
-        .skill-tag { background: var(--text); color: var(--bg); padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; transition: all 0.3s; }
-        .client-tag { background: var(--gray); color: var(--text-muted); padding: 6px 14px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; border: 1px solid rgba(0,0,0,0.03); }
+        /* TAGS & BADGES */
+        .tags-container { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 1.2rem; }
+        .skill-tag { background: var(--text); color: var(--bg); padding: 5px 12px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; transition: all 0.3s; }
+        .client-tag { background: var(--gray); color: var(--text-muted); padding: 5px 12px; border-radius: 4px; font-size: 0.8rem; font-weight: 600; border: 1px solid rgba(0,0,0,0.03); }
         
-        .client-tag:hover { background: var(--text); color: var(--bg); transform: translateY(-2px); }
-        .skill-tag:hover { background: var(--orange) !important; color: #ffffff !important; transform: translateY(-2px); }
+        .client-tag:hover { background: var(--text); color: var(--bg); transform: translateY(-1px); }
+        .skill-tag:hover { background: var(--orange) !important; color: #ffffff !important; transform: translateY(-1px); }
 
-        .cert-link-wrapper { margin-top: 1.2rem; display: block; }
-        .cert-inline-link { font-weight: 800; text-decoration: none; color: var(--text); border-bottom: 2px solid var(--orange); padding-bottom: 2px; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 4px; }
+        .cert-link-wrapper { margin-top: 1rem; display: block; }
+        .cert-inline-link { font-weight: 800; text-decoration: none; color: var(--text); border-bottom: 2px solid var(--orange); padding-bottom: 2px; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.78rem; display: inline-flex; align-items: center; gap: 4px; }
         .cert-inline-link:hover { color: var(--orange); }
 
-        /* FOOTER */
-        footer { margin-top: 20vh; padding-bottom: 8vh; border-top: 1px solid var(--gray); padding-top: 5rem; }
+        /* FOOTER EXTRA RESPONSIVO */
+        footer { margin-top: 15vh; padding-bottom: 6vh; border-top: 1px solid var(--gray); padding-top: 4rem; }
         .footer-grid { display: flex; flex-direction: column; gap: 1.5rem; }
-        .footer-email { font-size: clamp(1.5rem, 5vw, 4.2rem); font-weight: 800; text-decoration: none; color: var(--text); display: inline-flex; align-items: center; gap: 15px; word-break: break-all; width: fit-content; }
+        .footer-email { font-size: clamp(1.35rem, 4.5vw, 3.8rem); font-weight: 800; text-decoration: none; color: var(--text); display: inline-flex; align-items: center; gap: 10px; word-break: break-all; width: fit-content; }
         .footer-email:hover { color: var(--orange); }
         
-        .social-links-footer { display: flex; gap: 20px; align-items: center; }
-        .social-icon-link { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--text); font-weight: 800; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 10px 18px; border-radius: 30px; background: var(--gray); transition: all 0.3s; }
-        .social-icon-link:hover { background: var(--text); color: var(--bg); transform: translateY(-4px); }
-        .social-icon-link svg { width: 18px; height: 18px; fill: currentColor; }
+        .social-links-footer { display: flex; gap: 12px; flex-wrap: wrap; }
+        .social-icon-link { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--text); font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 10px 16px; border-radius: 30px; background: var(--gray); transition: all 0.3s; }
+        .social-icon-link:hover { background: var(--text); color: var(--bg); transform: translateY(-3px); }
+        .social-icon-link svg { width: 16px; height: 16px; fill: currentColor; }
 
-        .privacy-wrapper { margin-top: 2rem; }
-        .privacy-link { color: var(--text-muted); font-size: 0.85rem; text-decoration: none; border-bottom: 1px solid transparent; transition: all 0.2s; }
+        .privacy-wrapper { margin-top: 1.5rem; }
+        .privacy-link { color: var(--text-muted); font-size: 0.8rem; text-decoration: none; border-bottom: 1px solid transparent; transition: all 0.2s; }
         .privacy-link:hover { color: var(--orange); border-bottom-color: var(--orange); }
 
+        /* MEDIAS QUERIES ADICIONAIS PARA SMARTPHONES (TELA VIVA E ADAPTAÇÃO) */
         @media (max-width: 992px) {
-            .experience-item { grid-template-cols: 1fr; padding: 3rem 1.5rem; margin: 0; }
+            .experience-item { grid-template-columns: 1fr; padding: 2.5rem 1rem; margin: 0; }
+            header { min-height: auto; padding: 6rem 0 2rem 0; }
+        }
+        @media (max-width: 480px) {
+            .hero-actions { flex-direction: column; align-items: stretch; width: 100%; gap: 12px; }
+            .download-btn { width: 100%; }
+            .header-social-links { justify-content: center; width: 100%; }
+            .floating-panel { padding: 2px; }
+            .lang-btn { padding: 5px 10px; font-size: 0.7rem; }
         }
     </style>
 </head>
@@ -225,11 +205,11 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="controls-wrapper">
         <div class="floating-panel">
-            <button class="lang-btn" id="btn-lang-en" onclick="switchLang('en')">EN</button>
-            <button class="lang-btn" id="btn-lang-pt" onclick="switchLang('pt')">PT</button>
+            <button class="lang-btn" id="btn-lang-en" onclick="switchLang('en')" data-gtm-track="toggle-language-en">EN</button>
+            <button class="lang-btn" id="btn-lang-pt" onclick="switchLang('pt')" data-gtm-track="toggle-language-pt">PT</button>
         </div>
         <div class="floating-panel">
-            <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+            <button class="theme-toggle-btn" id="btn-theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme" data-gtm-track="toggle-theme-mode">
                 <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
             </button>
         </div>
@@ -244,14 +224,14 @@
             </div>
             <div class="hero-actions">
                 <div class="header-social-links">
-                    <a href="mailto:contato@oscarmosca.com.br" class="header-icon-link" aria-label="Email">
+                    <a href="mailto:contato@oscarmosca.com.br" id="link-hero-email" class="header-icon-link" aria-label="Email" data-gtm-track="hero-contact-email">
                         <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                     </a>
-                    <a href="https://www.linkedin.com/in/oscarmosca" target="_blank" class="header-icon-link" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/oscarmosca" id="link-hero-linkedin" target="_blank" class="header-icon-link" aria-label="LinkedIn" data-gtm-track="hero-contact-linkedin">
                         <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                     </a>
                 </div>
-                <a href="resume_oscar.pdf" download="resume_oscar.pdf" class="download-btn" id="btn-resume">Download Resume ↓</a>
+                <a href="resume_oscar.pdf" download="resume_oscar.pdf" class="download-btn" id="btn-resume" data-gtm-track="download-resume-pdf">Download Resume ↓</a>
             </div>
         </header>
 
@@ -263,7 +243,7 @@
         <section>
             <span class="section-tag reveal" id="label-career">Professional Journey</span>
 
-            <div class="experience-item meli-border reveal">
+            <div class="experience-item meli-border reveal" id="exp-card-mercado-livre">
                 <div>
                     <span class="section-tag" style="margin-bottom: 0.5rem;" id="label-current">Current Role</span>
                     <div class="title-container">
@@ -275,12 +255,12 @@
                     <div class="exp-role" id="meli-role"></div>
                     <div class="exp-duration" id="meli-date"></div>
                     <ul class="exp-bullets" id="meli-bullets"></ul>
-                    <div id="meli-cert-wrapper" class="cert-link-wrapper"></div>
+                    <div id="meli-cert-wrapper" class="cert-link-wrapper" data-gtm-track="click-certification-meli"></div>
                     <div class="tags-container" id="meli-skills"></div>
                 </div>
             </div>
 
-            <div class="experience-item accenture-border reveal">
+            <div class="experience-item accenture-border reveal" id="exp-card-accenture">
                 <div>
                     <span class="section-tag" style="margin-bottom: 0.5rem;" id="label-base">Corporate Base</span>
                     <div class="title-container">
@@ -296,7 +276,7 @@
                 </div>
             </div>
 
-            <div class="experience-item pin-border reveal">
+            <div class="experience-item pin-border reveal" id="exp-card-pinterest">
                 <div>
                     <span class="section-tag" style="margin-bottom: 0.5rem;" id="label-vertical">AdTech Vertical</span>
                     <div class="title-container">
@@ -308,7 +288,7 @@
                     <div class="exp-role" id="pin-role"></div>
                     <div class="exp-duration" id="pin-date"></div>
                     <ul class="exp-bullets" id="pin-bullets"></ul>
-                    <div id="pin-cert-wrapper" class="cert-link-wrapper"></div>
+                    <div id="pin-cert-wrapper" class="cert-link-wrapper" data-gtm-track="click-certification-pinterest"></div>
                     <span class="section-tag" style="margin-top: 1.8rem; margin-bottom: 0.8rem; font-size: 0.65rem;" id="label-clients">Enterprise Brands Built & Scaled:</span>
                     <div class="tags-container">
                         <span class="client-tag">Renner</span><span class="client-tag">Netflix</span><span class="client-tag">Shopee</span><span class="client-tag">Riachuelo</span><span class="client-tag">Grupo Soma</span><span class="client-tag">HBO Max</span><span class="client-tag">Disney+</span>
@@ -316,7 +296,7 @@
                 </div>
             </div>
 
-            <div class="experience-item luby-border reveal" style="opacity: 0.85;">
+            <div class="experience-item luby-border reveal" style="opacity: 0.85;" id="exp-card-luby">
                 <div>
                     <span class="section-tag" style="margin-bottom: 0.5rem;" id="label-consulting">Tech Consulting</span>
                     <div class="title-container">
@@ -332,7 +312,7 @@
                 </div>
             </div>
 
-            <div class="experience-item mobsite-border reveal" style="opacity: 0.75;">
+            <div class="experience-item mobsite-border reveal" style="opacity: 0.75;" id="exp-card-mobsite">
                 <div>
                     <span class="section-tag" style="margin-bottom: 0.5rem;" id="label-saas">SaaS Sales</span>
                     <div class="title-container">
@@ -347,7 +327,7 @@
                 </div>
             </div>
 
-            <div class="experience-item tilibra-border reveal" style="opacity: 0.5;">
+            <div class="experience-item tilibra-border reveal" style="opacity: 0.5;" id="exp-card-tilibra">
                 <div>
                     <span class="section-tag" style="margin-bottom: 0.5rem;" id="label-foundation">Operations Foundation</span>
                     <div class="title-container">
@@ -367,21 +347,21 @@
         <footer class="reveal">
             <span class="section-tag" id="label-contact">Contact & Inquiries</span>
             <div class="footer-grid">
-                <a href="mailto:contato@oscarmosca.com.br" class="footer-email">
+                <a href="mailto:contato@oscarmosca.com.br" id="link-footer-main-email" class="footer-email" data-gtm-track="footer-contact-main-email">
                     contato@oscarmosca.com.br
                 </a>
                 <div class="social-links-footer">
-                    <a href="mailto:contato@oscarmosca.com.br" class="social-icon-link">
+                    <a href="mailto:contato@oscarmosca.com.br" id="link-footer-icon-email" class="social-icon-link" data-gtm-track="footer-contact-icon-email">
                         <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                         Email
                     </a>
-                    <a href="https://www.linkedin.com/in/oscarmosca" target="_blank" class="social-icon-link">
+                    <a href="https://www.linkedin.com/in/oscarmosca" id="link-footer-icon-linkedin" target="_blank" class="social-icon-link" data-gtm-track="footer-contact-icon-linkedin">
                         <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                         LinkedIn
                     </a>
                 </div>
                 <div class="privacy-wrapper">
-                    <a href="privacy.html" class="privacy-link" id="label-privacy">Privacy Policy</a>
+                    <a href="privacy.html" class="privacy-link" id="label-privacy" data-gtm-track="footer-click-privacy-policy">Privacy Policy</a>
                 </div>
             </div>
         </footer>
@@ -393,7 +373,7 @@
                 heroRole: "Retail Media Specialist Manager",
                 btnResume: "Download Resume ↓",
                 labelAbout: "About",
-                aboutContent: "A results-oriented AdTech leader with a robust history of driving substantial data-driven growth. At <strong>Mercado Livre Ads</strong>, I optimize high-spend retail activations, structurally <strong>reducing bottom-performing team members from 30% to under 10%</strong>. Previously at <strong>Accenture</strong> and <strong>Pinterest</strong>, I managed high-profile BPO initiatives, scaling digital revenue and deployment matrices for Tier-1 accounts with an <strong>average ROI growth exceeding 10x</strong>.",
+                aboutContent: "A results-oriented AdTech leader with a robust history of driving substantial data-driven growth[cite: 28]. At <strong>Mercado Livre Ads</strong>, I optimize high-spend retail activations, structurally <strong>reducing bottom-performing team members from 30% to under 10%</strong>[cite: 29]. Previously at <strong>Accenture</strong> [cite: 25] and <strong>Pinterest</strong> [cite: 25], I managed high-profile BPO initiatives, scaling digital revenue and deployment matrices for Tier-1 accounts with an <strong>average ROI growth exceeding 10x</strong>[cite: 31, 32].",
                 labelCareer: "Professional Journey", 
                 labelCurrent: "Current Role", 
                 labelPrevious: "Past Projects",
@@ -406,37 +386,37 @@
                 labelClients: "Enterprise Brands Built & Scaled:",
                 labelPrivacy: "Privacy Policy",
                 meliRole: "Retail Media Specialist Manager @ <strong>Accenture</strong>",
-                meliDate: "Nov 2025 — Present (8 mos)",
+                meliDate: "Nov 2025 — Present (8 mos) [cite: 65]",
                 meliBullets: [
-                    "Leading a team of 3 specialists focused on maximizing performance metrics for Mercado Libre Ads ecosystem.",
+                    "Leading a team of 3 specialists focused on maximizing performance metrics for Mercado Libre Ads ecosystem[cite: 67].",
                     "Directly restructured execution standards, driving a significant reduction in team bottom-performers from 30% to under 10%.",
-                    "Empowering strategic account managers to maximize ROAS and optimize complex ad spends for elite Latin American sellers."
+                    "Empowering strategic account managers to maximize ROAS and optimize complex ad spends for elite Latin American sellers[cite: 68]."
                 ],
-                meliCert: '<a href="https://academy.mercadoads.com/student/award/1G7ogaVh5diBM38K2PEdt4SJ" target="_blank" class="cert-inline-link">Product Ads Certified ↗</a>',
-                accentureRole: "Inside Sales Management Senior Analyst",
-                accentureDate: "April 2024 — Present (2 yrs 3 mos)",
+                meliCert: '<a href="https://academy.mercadoads.com/student/award/1G7ogaVh5diBM38K2PEdt4SJ" target="_blank" class="cert-inline-link" id="link-cert-meli" data-gtm-track="certification-click-meli-en">Product Ads Certified ↗</a>',
+                accentureRole: "Inside Sales Management Senior Analyst [cite: 43]",
+                accentureDate: "April 2024 — Present (2 yrs 3 mos) [cite: 43]",
                 accentureBullets: [
-                    "Directly steering massive BPO operational projects dedicated to Mercado Livre's scalable growth trajectories.",
-                    "Formulating day-to-day sales targets, mapping pipelines, and managing timesheet compliance and operations metrics.",
-                    "Executing rigorous 1-on-1 performance counseling reviews, career coaching architectures, and robust Business Reviews (WBR/MBR)."
+                    "Directly steering massive BPO operational projects dedicated to Mercado Livre's scalable growth trajectories[cite: 45].",
+                    "Formulating day-to-day sales targets, mapping pipelines, and managing timesheet compliance and operations metrics[cite: 48, 51].",
+                    "Executing rigorous 1-on-1 performance counseling reviews, career coaching architectures, and robust Business Reviews (WBR/MBR)[cite: 49, 50]."
                 ],
-                pinRole: "Client Account Manager Support",
-                pinDate: "July 2022 — October 2025 (3 yrs 4 mos)",
+                pinRole: "Client Account Manager Support [cite: 71]",
+                pinDate: "July 2022 — October 2025 (3 yrs 4 mos) [cite: 70]",
                 pinBullets: [
-                    "Drove proactive, advisory relationship execution inside enterprise-tier retail and high-tech advertising verticals.",
-                    "Delivered structural media deployment plans that catalyzed an average ROI expansion of over 10x for major clients.",
-                    "Engineered end-to-end automated insight scorecards utilizing native data pipelines and Looker Studio layouts."
+                    "Drove proactive, advisory relationship execution inside enterprise-tier retail and high-tech advertising verticals[cite: 31].",
+                    "Delivered structural media deployment plans that catalyzed an average ROI expansion of over 10x for major clients[cite: 32].",
+                    "Engineered end-to-end automated insight scorecards utilizing native data pipelines and Looker Studio layouts[cite: 36, 59]."
                 ],
-                pinCert: '<a href="https://sei.caveon.com/score/WyI1ZTg0YzYwNS1iYzM2LTQ4NTMtYjYxYi05NDU1MGYzNGY1MzAiLGZhbHNlXQ.JTvKzAltDpsw2IJ-SZsxKV4dE_g" target="_blank" class="cert-inline-link">Pinterest Certified Media Buyer ↗</a>',
-                lubyRole: "Account Executive Jr.",
-                lubyDate: "Sep 2021 — Mar 2022 (11 mos)",
-                lubyDesc: "Negotiated complex contracts and managed software development squad setups for international US tech markets using consultative methods, securing closed projects valued at over R$500k.",
-                mobsiteRole: "Inside Sales Representative",
-                mobsiteDate: "Feb 2020 — May 2021 (1 yr 4 mos)",
-                mobsiteDesc: "Architected inside pipeline infrastructures, automated workflows via RD Station, and achieved scalable inbound commercial conversion.",
-                tilibraRole: "Off-Set Press Operator",
-                tilibraDate: "May 2010 — February 2018 (7 yrs 10 mos)",
-                tilibraDesc: "Executed precise technical parameters, printed high-output notebook layers, and engineered continuous optimization sprints (CapDo).",
+                pinCert: '<a href="https://sei.caveon.com/score/WyI1ZTg0YzYwNS1iYzM2LTQ4NTMtYjYxYi05NDU1MGYzNGY1MzAiLGZhbHNlXQ.JTvKzAltDpsw2IJ-SZsxKV4dE_g" target="_blank" class="cert-inline-link" id="link-cert-pin" data-gtm-track="certification-click-pinterest-en">Pinterest Certified Media Buyer ↗</a>',
+                lubyRole: "Account Executive Jr. [cite: 78]",
+                lubyDate: "Sep 2021 — Mar 2022 (11 mos) [cite: 77]",
+                lubyDesc: "Negotiated complex contracts and managed software development squad setups for international US tech markets using consultative methods, securing closed projects valued at over R$500k[cite: 81, 82].",
+                mobsiteRole: "Inside Sales Representative [cite: 90]",
+                mobsiteDate: "Feb 2020 — May 2021 (1 yr 4 mos) [cite: 91]",
+                mobsiteDesc: "Architected inside pipeline infrastructures, automated workflows via RD Station, and achieved scalable inbound commercial conversion[cite: 93, 94].",
+                tilibraRole: "Off-Set Press Operator [cite: 102]",
+                tilibraDate: "May 2010 — February 2018 (7 yrs 10 mos) [cite: 101]",
+                tilibraDesc: "Executed precise technical parameters, printed high-output notebook layers, and engineered continuous optimization sprints (CapDo)[cite: 104, 105].",
                 meliSkills: ["Retail Media", "Team Optimization", "Performance Systems", "E-commerce Ads", "Leadership"],
                 accentureSkills: ["BPO Management", "Sales Operations", "Business Review", "Performance Analysis", "Coaching"],
                 pinSkills: ["ROI Scaling", "Looker Studio", "Account Management", "Full-Funnel Strategy", "Salesforce"],
@@ -448,7 +428,7 @@
                 heroRole: "Gerente Especialista em Retail Media",
                 btnResume: "Baixar Currículo ↓",
                 labelAbout: "Sobre",
-                aboutContent: "Líder focado em AdTech com um histórico robusto de aceleração de receita por dados. No <strong>Mercado Livre Ads</strong>, otimizo ecossistemas de varejo complexos, promovendo a <strong>redução drástica de profissionais bottom-performers de 30% para menos de 10%</strong>. Com atuação prévia estratégica pela <strong>Accenture</strong> e <strong>Pinterest</strong>, gerenciei projetos complexos de BPO de grande porte, escalando marcas líderes do mercado (Tier-1) com entregas de <strong>ROI médio superior a 10x</strong>.",
+                aboutContent: "Líder focado em AdTech com um histórico robusto de aceleração de receita por dados[cite: 28]. No <strong>Mercado Livre Ads</strong>, otimizo ecossistemas de varejo complexos[cite: 29], promovendo a <strong>redução drástica de profissionais bottom-performers de 30% para menos de 10%</strong>. Com atuação prévia estratégica pela <strong>Accenture</strong> [cite: 25] e <strong>Pinterest</strong> [cite: 25], gerenciei projetos complexos de BPO de grande porte [cite: 45], escalando marcas líderes do mercado (Tier-1) com entregas de <strong>ROI médio superior a 10x</strong>[cite: 32].",
                 labelCareer: "Trajetória Profissional", 
                 labelCurrent: "Posição Atual", 
                 labelPrevious: "Projetos Anteriores",
@@ -461,37 +441,37 @@
                 labelClients: "Clientes Enterprise Desenvolvidos & Escalados:",
                 labelPrivacy: "Política de Privacidade",
                 meliRole: "Gerente Especialista em Retail Media @ <strong>Accenture</strong>",
-                meliDate: "Nov 2025 — Presente (8 meses)",
+                meliDate: "Nov 2025 — Presente (8 meses) [cite: 65]",
                 meliBullets: [
-                    "Liderança de time técnico composto por 3 especialistas com foco em maximizar métricas do ecossistema Mercado Livre Ads.",
+                    "Liderança de time técnico composto por 3 especialistas com foco em maximizar métricas do ecossistema Mercado Livre Ads[cite: 67].",
                     "Reestruturação de padrões operacionais, reduzindo com sucesso a taxa de profissionais sob baixa performance de 30% para menos de 10%.",
-                    "Capacitação de gerentes de conta e sellers de elite para otimizar investimentos em mídia e maximizar o ROAS na América Latina."
+                    "Capacitação de gerentes de conta e sellers de elite para otimizar investimentos em mídia e maximizar o ROAS na América Latina[cite: 68]."
                 ],
-                meliCert: '<a href="https://academy.mercadoads.com/student/award/1G7ogaVh5diBM38K2PEdt4SJ" target="_blank" class="cert-inline-link">Certificado Product Ads ↗</a>',
-                accentureRole: "Analista Sênior de Gestão de Inside Sales",
-                accentureDate: "Abril 2024 — Presente (2 anos 3 meses)",
+                meliCert: '<a href="https://academy.mercadoads.com/student/award/1G7ogaVh5diBM38K2PEdt4SJ" target="_blank" class="cert-inline-link" id="link-cert-meli" data-gtm-track="certification-click-meli-pt">Certificado Product Ads ↗</a>',
+                accentureRole: "Analista Sênior de Gestão de Inside Sales [cite: 43]",
+                accentureDate: "Abril 2024 — Presente (2 anos 3 meses) [cite: 43]",
                 accentureBullets: [
-                    "Liderança de operações massivas de BPO focadas em trajetórias de crescimento escalável para o projeto Mercado Livre.",
-                    "Formulação de metas diárias, controle higiênico de CRM, forecasting de vendas e governança de compliance/timesheets.",
-                    "Execução rigorosa de reuniões de alinhamento 1-on-1, coaching de carreira e construção de revisões de negócios (WBR/MBR)."
+                    "Liderança de operações massivas de BPO focadas em trajetórias de crescimento escalável para o projeto Mercado Livre[cite: 45].",
+                    "Formulação de metas diárias, controle higiênico de CRM, forecasting de vendas e governança de compliance/timesheets[cite: 48, 51].",
+                    "Execução rigorosa de reuniões de alinhamento 1-on-1, coaching de carreira e construção de revisões de negócios (WBR/MBR)[cite: 49, 50]."
                 ],
-                pinRole: "Suporte ao Gerente de Contas de Clientes",
-                pinDate: "Julho 2022 — Outubro 2025 (3 anos 4 meses)",
+                pinRole: "Suporte ao Gerente de Contas de Clientes [cite: 71]",
+                pinDate: "Julho 2022 — Outubro 2025 (3 anos 4 meses) [cite: 70]",
                 pinBullets: [
-                    "Atuação consultiva de ponta (trusted advisor) junto a contas enterprise nas verticais de varejo, moda, turismo e seguros.",
-                    "Desenvolvimento e entrega de planos de mídia estruturados full-funnel que geraram aumento de ROI médio acima de 10x.",
-                    "Engenharia de scorecards automáticos detalhados de performance integrando Looker Studio e pipelines de dados analíticos."
+                    "Atuação consultiva de ponta (trusted advisor) junto a contas enterprise nas verticais de varejo, moda, turismo e seguros[cite: 31].",
+                    "Desenvolvimento e entrega de planos de mídia estruturados full-funnel que geraram aumento de ROI médio acima de 10x[cite: 32].",
+                    "Engenharia de scorecards automáticos detalhados de performance integrando Looker Studio e pipelines de dados analíticos[cite: 36, 59]."
                 ],
-                pinCert: '<a href="https://sei.caveon.com/score/WyI1ZTg0YzYwNS1iYzM2LTQ4NTMtYjYxYi05NDU1MGYzNGY1MzAiLGZhbHNlXQ.JTvKzAltDpsw2IJ-SZsxKV4dE_g" target="_blank" class="cert-inline-link">Pinterest Certified Media Buyer ↗</a>',
-                lubyRole: "Executivo de Contas Jr.",
-                lubyDate: "Set 2021 — Mar 2022 (11 meses)",
-                lubyDesc: "Negociação de contratos de escopo complexo e alocação consultiva de squads de engenharia de software para o mercado internacional americano, garantindo o fechamento de projetos acima de R$500k.",
-                mobsiteRole: "Representante de Inside Sales",
-                mobsiteDate: "Fev 2020 — Mai 2021 (1 ano 4 meses)",
-                mobsiteDesc: "Arquitetura comercial de conversão inbound, modelagem de automações via RD Station e gestão de cadências complexas de vendas.",
-                tilibraRole: "Operador de Impressora Off-Set",
-                tilibraDate: "Mai 2010 — Fevereiro 2018 (7 anos 10 meses)",
-                tilibraDesc: "Execução industrial técnica de alta tiragem de insumos gráficos com garantia total de qualidade e aplicação de ciclos contínuos (CapDo).",
+                pinCert: '<a href="https://sei.caveon.com/score/WyI1ZTg0YzYwNS1iYzM2LTQ4NTMtYjYxYi05NDU1MGYzNGY1MzAiLGZhbHNlXQ.JTvKzAltDpsw2IJ-SZsxKV4dE_g" target="_blank" class="cert-inline-link" id="link-cert-pin" data-gtm-track="certification-click-pinterest-pt">Pinterest Certified Media Buyer ↗</a>',
+                lubyRole: "Executivo de Contas Jr. [cite: 78]",
+                lubyDate: "Set 2021 — Mar 2022 (11 meses) [cite: 77]",
+                lubyDesc: "Negociação de contratos de escopo complexo e alocação consultiva de squads de engenharia de software para o mercado internacional americano, garantindo o fechamento de projetos acima de R$500k[cite: 82].",
+                mobsiteRole: "Representante de Inside Sales [cite: 90]",
+                mobsiteDate: "Fev 2020 — Mai 2021 (1 ano 4 meses) [cite: 91]",
+                mobsiteDesc: "Arquitetura comercial de conversão inbound, modelagem de automações via RD Station e gestão de cadências complexas de vendas[cite: 93, 94].",
+                tilibraRole: "Operador de Impressora Off-Set [cite: 102]",
+                tilibraDate: "Mai 2010 — Fevereiro 2018 (7 anos 10 meses) [cite: 101]",
+                tilibraDesc: "Execução industrial técnica de alta tiragem de insumos gráficos com garantia total de qualidade e aplicação de ciclos contínuos (CapDo)[cite: 104, 105].",
                 meliSkills: ["Retail Media", "Otimização de Equipes", "Sistemas de Performance", "E-commerce Ads", "Liderança"],
                 accentureSkills: ["Gestão de BPO", "Operações de Vendas", "Business Review", "Análise de Performance", "Coaching"],
                 pinSkills: ["Escala de ROI", "Looker Studio", "Gestão de Contas", "Estratégia Full-Funnel", "Salesforce"],
